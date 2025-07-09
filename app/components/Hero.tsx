@@ -4,6 +4,7 @@ import { TextGenerateEffect } from './ui/TextGenerateEffect'
 import MagicButton from './ui/MagicButton'
 import { FaLocationArrow } from 'react-icons/fa6'
 import profileImage from '../../public/profile-image.png'
+import Link from 'next/link'
 
 const Hero = () => {
   return (
@@ -38,7 +39,7 @@ const Hero = () => {
           I&apos;m Fabian, a Software Engineer and Problem-Solver passionate about building scalable web applications. With expertise in full-stack development, I specialize in C# and React. I enjoy building innovative solutions, and contributing to the tech ecosystem.        
         </p>
 
-        <a href="/#projects">
+        <Link href="/#projects">
           <MagicButton 
             title='Show my work' 
             icon={<FaLocationArrow />}
@@ -46,7 +47,7 @@ const Hero = () => {
             optionalClasses='relative rounded-lg'  
 
           />
-          </a>
+          </Link>
 
       </div>
     </div>
