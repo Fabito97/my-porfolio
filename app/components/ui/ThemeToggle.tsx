@@ -1,7 +1,7 @@
 import React from 'react'
 import { FaMoon, FaSun } from 'react-icons/fa6'
 
-const ThemeToggle = ({isDark, toggleTheme}:{isDark:Boolean, toggleTheme:()=>void}) => {
+const ThemeToggle = ({isDark, toggleTheme}:{isDark:boolean, toggleTheme:()=>void}) => {
   return (
     <div className="sm:sticky z-[999] top-0 ml-auto max-md:mt-6">
                 <button onClick={toggleTheme} className="relative inline-flex dark:h-10 h-11 overflow-hidden rounded-md shadow-lg p-[1.5px] dark:p-[1px] focus:outline-none md:w-auto md:mt-10">

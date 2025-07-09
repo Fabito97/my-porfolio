@@ -6,7 +6,7 @@ import { FaLocationArrow } from "react-icons/fa6"
 const RecentProjects = ({
   isDark
 }:{
-  isDark:Boolean
+  isDark:boolean
 }) => {
 
   const color = isDark ? "#CBACF9" : "#3B82F6"
