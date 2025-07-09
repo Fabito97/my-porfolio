@@ -3,11 +3,7 @@ import { PinContainer } from "./ui/3d-pin"
 import { FaLocationArrow } from "react-icons/fa6"
 
 
-const RecentProjects = ({
-  isDark
-}:{
-  isDark:boolean
-}) => {
+const RecentProjects = ({ isDark }:{ isDark:boolean }) => {
 
   const color = isDark ? "#CBACF9" : "#3B82F6"
 
@@ -40,6 +36,7 @@ const RecentProjects = ({
                   {iconLists.map((icon,index) => (
                     <div className="border border-white/[0.2] rounded-full overflow-hidden bg-black lg:w-10 sm:w-8 w-7 h-8 flex justify-center items-center"
                       style={{transform: `translateX(-${5 * index * 2})`}}
+                      key={index}
                     >
                       <img src={icon} alt={icon} 
                         className="sm:p-2 p-1"
