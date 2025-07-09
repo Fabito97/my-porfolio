@@ -89,7 +89,7 @@ export const InfiniteMovingCards = ({
           <li
             className={cn(
               "w-[80vw] max-w-full h-auto relative rounded-2xl border border-b-0 flex-shrink-0 dark:border-slate-800 border-gray-300 p-5 md:p-12 md:w-[65vw] lg:w-[45vw]",
-              "bg-gray-100 shadow-lg text-black", // light mode
+              "bg-gray-50 shadow-lg text-black", // light mode
               "dark:bg-gradient-to-r dark:from-[#04071D] dark:to-[#0C0E23] dark:text-white dark:shadow-xl"
             )}
 

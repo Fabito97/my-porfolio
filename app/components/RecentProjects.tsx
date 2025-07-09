@@ -3,7 +3,14 @@ import { PinContainer } from "./ui/3d-pin"
 import { FaLocationArrow } from "react-icons/fa6"
 
 
-const RecentProjects = () => {
+const RecentProjects = ({
+  isDark
+}:{
+  isDark:Boolean
+}) => {
+
+  const color = isDark ? "#CBACF9" : "#3B82F6"
+
   return (
     <div className="py-12 md:py-16" id="projects">
       <h1 className="text-3xl text-center font-bold w-[90%] mx-auto">
@@ -41,8 +48,8 @@ const RecentProjects = () => {
                   ))}
                 </div>
                 <div  className="flex justify-center items-center max-sm:w-[50%] text-center">
-                  <p className="text-xs text-[12px] md:text-xs sm:text-sm text-blue-500 dark:text-purpl">Check Live Site</p>
-                  {<FaLocationArrow className="ms-2" color="#CBACF9"/>}
+                  <p className="text-xs text-[12px] md:text-xs sm:text-sm text-blue-500 dark:text-purple">Check Live Site</p>
+                  {<FaLocationArrow className="ms-2" color={color}/>}
                 </div>
               </div>
 

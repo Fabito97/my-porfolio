@@ -7,7 +7,7 @@ const Clients = () => {
     <div className="py-6 mt-10 md:mt-24 mb-5" id="testimonials">
       <h1 className="headin text-center text-3xl font-bold dark:text-blue-100 mb-6">
         Kind words from  
-         <span className="text-black-200 dark:text-purple"> satisfied clients</span>
+         <span className="text-black dark:text-purple"> satisfied clients</span>
       </h1>
       <div className="flex flex-col items-center sm:mt-8 mt-8 mb-7">
             
