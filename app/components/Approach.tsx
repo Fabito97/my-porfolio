@@ -84,7 +84,7 @@ const Card = ({
             animate={{ opacity: 1 }}
             className="h-full w-full absolute inset-0"
           >
-            {children}
+            {children ?? ""}
           </motion.div>
         )}
       </AnimatePresence>
@@ -99,7 +99,7 @@ const Card = ({
         <h2 className="dark:text-white text-sm opacity-0 group-hover/canvas-card:opacity-100 relative z-10 text-black mt-4  font-bold group-hover/canvas-card:text-white group-hover/canvas-card:-translate-y-2 transition duration-200 text-center"
           style={{color: '#e4ecff'}}
         >
-          {description}
+          {description ?? ""}
         </h2>
       </div>
     </div>
