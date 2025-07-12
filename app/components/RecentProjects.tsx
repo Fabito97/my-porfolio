@@ -8,12 +8,12 @@ const RecentProjects = ({ isDark }:{ isDark:boolean }) => {
   const color = isDark ? "#CBACF9" : "#3B82F6"
 
   return (
-    <div className="py-12 md:py-12" id="projects">
+    <div className="py-12 md:py-12 " id="projects">
       <h1 className="text-3xl text-center font-bold w-[90%] mx-auto">
         A small selection of  
          <span className="text-black-10 dark:text-purple"> recent projects</span>
       </h1>
-      <div className="flex flex-wrap items-center justify-center gap-x-20 gap-y-16 md:gap-y-10 lg:gap-y-20  p-4 mt-5">
+      <div className="flex flex-wrap items-center justify-center gap-x-20 gap-y-16 md:gap-y-10 lg:gap-y-20 p-4 mt-10">
         {projects.map(({id, title, des, img, iconLists, link}) => (
           <div key={id} className="min-h-[28rem] sm:min-h-[30rem] md:min-h-[23rem] lg:min-h-[22.5rem] flex items-center justify-center md:w-[280px]  lg:w-[370px] w-[80vw]">
             <PinContainer title={link} href={link}>

@@ -33,7 +33,7 @@ export default function Home() {
         <Skills />
         <Experience isDark={isDarkMode}/>       
         <RecentProjects isDark={isDarkMode} />
-        <Clients />
+        {/* <Clients /> */}
         {/* <Approach /> */}
         <Footer />
       </div>
