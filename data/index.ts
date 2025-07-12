@@ -184,7 +184,7 @@ export const workExperience = [
   {
     id: 1,
     title: "Software Engineer Trainee – Decagon Institute",
-    desc: "Completed 4 week intensive training in React, .NET Core, SQL Server, and Agile methodologies. Spearheaded the development of a full-stack e-commerce MVP featuring Google Sign-In and real-time search, and managed database efficiency using Entity Framework.",
+    desc: "Completed 4 month intensive training in React, .NET Core, SQL Server, and Agile methodologies. Spearheaded the development of a full-stack e-commerce MVP featuring Google Sign-In and real-time search, and managed database efficiency using Entity Framework.",
     className: "md:col-span-2",
     thumbnail: "/exp1.svg"
   },
