@@ -34,7 +34,7 @@ export default function Home() {
         <Experience isDark={isDarkMode}/>       
         <RecentProjects isDark={isDarkMode} />
         <Clients />
-        <Approach />
+        {/* <Approach /> */}
         <Footer />
       </div>
     </main>
