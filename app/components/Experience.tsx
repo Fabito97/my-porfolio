@@ -13,7 +13,7 @@ import dynamic from "next/dynamic";
 
 const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 
-const Experience = () => {
+const Experience = ({ isDark }:{ isDark:boolean}) => {
   const [copied, setCopied] = useState(false);
 
   const handleCopy = () => {
@@ -60,7 +60,7 @@ const Experience = () => {
       <div className="mt-20 row-span-1 relative overflow-hidden rounded-3xl group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none flex flex-col space-y-4 border border-white/[0.1] h-[250px] max-w-[500px] mx-auto items-center justify-center">
         <BackgroundGradientAnimation/>
         <div
-        style={{ textShadow: "0 2px 4px rgba(0, 0, 0, 0.3)" }}
+        style={{ textShadow: isDark ? "0 2px 4px rgba(0, 0, 0, 0.3)": "" }}
         className="font-sans font-extralighttext-[#c1c2d3] text-xl sm:text-3xl z-10 text-center font-bold px-16">
           Do you want to hire me or start a project together
         </div>

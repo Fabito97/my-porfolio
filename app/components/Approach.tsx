@@ -11,18 +11,18 @@ const Approach = () => {
         My <span className="text-blue-70 dark:text-purple">approach</span>
       </h1>
       <div className="my-10 flex flex-col lg:flex-row items-center justify-center gap-4">
-        <Card 
-          title="Planning & Design" 
+        <Card
+          title="Planning & Design"
           icon={<AceternityIcon order="Phase 1" />}
           description="We'll collaborate to map out your website's goals, target audience, and key functionalities. We'll discuss things like site structure, architecture, and content requirements."
         >
-            <CanvasRevealEffect
-              animationSpeed={5.1}
-              containerClassName="bg-emerald-900"
-            />
+          <CanvasRevealEffect
+            animationSpeed={5.1}
+            containerClassName="bg-emerald-900"
+          />
         </Card>
-        <Card 
-          title="Development & Progress Update" 
+        <Card
+          title="Development & Progress Update"
           icon={<AceternityIcon order="Phase 2" />}
           description="Once we agree on the plan, I cue my lofi playlist and dive into coding. Form initial sketches to polished code, I keep you updated every step of the way."
         >
@@ -36,10 +36,10 @@ const Approach = () => {
             dotSize={2}
           />
           {/* Radial gradient for the cute fade */}
-        <div className="absolute inset-0 [mask-image:radial-gradient(400px_at_center,white,transparent)] bg-black/50 dark:bg-black/90" />
+          <div className="absolute inset-0 [mask-image:radial-gradient(400px_at_center,white,transparent)] bg-black/50 dark:bg-black/90" />
         </Card>
-        <Card 
-        title="Development & Launch" 
+        <Card
+          title="Development & Launch"
           icon={<AceternityIcon order="Phase 3" />}
           description="This is where the magic happens! Based on the approved design, I'll translate everything into fuctional code, building your website from the ground up."
         >
@@ -52,7 +52,7 @@ const Approach = () => {
       </div>
     </section>
   );
-}
+};
 
 const Card = ({
   title,
@@ -96,8 +96,9 @@ const Card = ({
         <h2 className="dark:text-white opacity-0 group-hover/canvas-card:opacity-100 relative z-10 text-black mt-4  font-bold group-hover/canvas-card:text-white group-hover/canvas-card:-translate-y-2 transition duration-200 text-center text-3xl">
           {title}
         </h2>
-        <h2 className="dark:text-white text-sm opacity-0 group-hover/canvas-card:opacity-100 relative z-10 text-black mt-4  font-bold group-hover/canvas-card:text-white group-hover/canvas-card:-translate-y-2 transition duration-200 text-center"
-          style={{color: '#e4ecff'}}
+        <h2
+          className="dark:text-white text-sm opacity-0 group-hover/canvas-card:opacity-100 relative z-10 text-black mt-4  font-bold group-hover/canvas-card:text-white group-hover/canvas-card:-translate-y-2 transition duration-200 text-center"
+          style={{ color: "#e4ecff" }}
         >
           {description ?? ""}
         </h2>
@@ -106,8 +107,8 @@ const Card = ({
   );
 };
 
-const AceternityIcon = ({order} : {order: string}) => {
-// bg-[conic-gradient(from_90deg_at_50%_50%,#3B82F6_0%,#ddd_50%,#3B82F6_100%)
+const AceternityIcon = ({ order }: { order: string }) => {
+  // bg-[conic-gradient(from_90deg_at_50%_50%,#3B82F6_0%,#ddd_50%,#3B82F6_100%)
   return (
     <div>
       <button className="relative inline-flex h-12 overflow-hidden rounded-full p-[2px] dark:p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">

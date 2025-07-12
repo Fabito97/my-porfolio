@@ -142,7 +142,7 @@ export const testimonials = [
   {
     quote:
       "Fabian’s energy is contagious. Whether it's refactoring legacy code or shipping MVP features, he jumps right in with thoughtful solutions and clear enthusiasm. He’s a builder at heart.",
-    name: "Amalachukwu Muoghalu",
+    name: "Amalachukwu",
     title: "Protroleum Engineer"
   }
 ];
@@ -184,28 +184,28 @@ export const workExperience = [
   {
     id: 1,
     title: "Software Engineer Trainee – Decagon Institute",
-    desc: `Completed 500+ hours of hands-on training in React, .NET Core, PostgreSQL, and Agile/Scrum.\nLed development of a full-stack e-commerce MVP with Google Sign-In and real-time search features.\nOptimized Entity Framework queries, reducing database execution time by 30%.`,
+    desc: "Completed 4 week intensive training in React, .NET Core, SQL Server, and Agile methodologies. Spearheaded the development of a full-stack e-commerce MVP featuring Google Sign-In and real-time search, and managed database efficiency using Entity Framework.",
     className: "md:col-span-2",
     thumbnail: "/exp1.svg"
   },
   {
     id: 2,
     title: "Backend Engineer Intern – HNG Tech",
-    desc: `Developed scalable APIs using .NET and Gemini API, supporting AI-driven blogging features for 500+ users.\nBuilt responsive React dashboards and automated Docker deployments, reducing release time by 20%.\nCreated real-time error logging middleware, cutting debug time by 20% through TDD.`,
+    desc: "Engineered RESTful APIs using .NET and the Gemini API to power AI-Agentic systems for task automation. Designed real-time error logging middleware leveraging TDD for faster debugging and an AI Blogging agent for task automation.",
     className: "md:col-span-2",
     thumbnail: "/exp2.svg"
   },
   {
     id: 3,
     title: "Volunteer Software Engineer – Penzra Hub",
-    desc: `Contributed to a travel app's backend with .NET Core and MongoDB, boosting request speed by 20%.\nEnhanced React-based driver onboarding flows, improving user experience by 15%.\nCollaborated in Agile sprints to deliver MVP functionality for real-world client needs.`,
+    desc: "Contributed to the backend development of a travel app using .NET Core and PostgreSQL, ensuring clean code and enhanced performance.",
     className: "md:col-span-2",
     thumbnail: "/exp3.svg"
   },
   {
     id: 4,
     title: "Freelance Backend Developer – Telex.im",
-    desc: `Built and maintained agent backend features using C#/.NET and MongoDB.\nAuthored integration guides that accelerated dev onboarding by 30%.\nDelivered scalable components for user-facing systems while supporting AI agent workflows.`,
+    desc: "Designed and maintained backend AI agent systems with C#/.NET and MongoDB including an AI Monitorin agent. Created internal integration guides to sped up team onboarding.",
     className: "md:col-span-2",
     thumbnail: "/exp4.svg"
   }

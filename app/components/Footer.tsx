@@ -35,6 +35,7 @@ const Footer = () => {
             <Link
               key={profile.id}
               href={profile.url}
+              target='blank'
               className='w-10 h-10 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-100 bg-black-100 dark:bg-black-200 rounded-lg border border-black-300'
             >
               <img

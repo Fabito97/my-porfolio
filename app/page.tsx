@@ -31,7 +31,7 @@ export default function Home() {
         <Hero />
         {/* <Grid/> */}
         <Skills />
-        <Experience />       
+        <Experience isDark={isDarkMode}/>       
         <RecentProjects isDark={isDarkMode} />
         <Clients />
         <Approach />

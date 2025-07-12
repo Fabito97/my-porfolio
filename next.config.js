@@ -1,18 +1,27 @@
-/** @type {import('next').NextConfig} */
+//** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
-  /* config options here */
+  output: 'export', // Generates a fully static site
+  reactStrictMode: true,
+  swcMinify: true,
+  // Optional: Prevent edge/server bundling of Sentry configs if needed
+  webpack: (config, options) => {
+    if (options.isServer && options.nextRuntime === 'edge') {
+      config.resolve.alias = {
+        ...config.resolve.alias,
+        './sentry.client.config.js': false,
+        './sentry.server.config.js': false,
+      };
+    }
+    return config;
+  },
 };
 
-module.exports = nextConfig;
-
-// Injected content via Sentry wizard below
-
-const { withSentryConfig } = require("@sentry/nextjs");
+const { withSentryConfig } = require('@sentry/nextjs');
 
 module.exports = withSentryConfig(
-  module.exports,
+  nextConfig,
   {
+
     // For all available options, see:
     // https://github.com/getsentry/sentry-webpack-plugin#options
 
