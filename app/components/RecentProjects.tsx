@@ -8,7 +8,7 @@ const RecentProjects = ({ isDark }:{ isDark:boolean }) => {
   const color = isDark ? "#CBACF9" : "#3B82F6"
 
   return (
-    <div className="py-12 md:py-16" id="projects">
+    <div className="py-12 md:py-12" id="projects">
       <h1 className="text-3xl text-center font-bold w-[90%] mx-auto">
         A small selection of  
          <span className="text-black-10 dark:text-purple"> recent projects</span>

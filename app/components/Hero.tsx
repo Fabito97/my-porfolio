@@ -35,8 +35,8 @@ const Hero = () => {
           words='Software Engineer'
         />
 
-        <p className='text-center md:tracking-wider mb-4 text-xs md:text-sm lg:text-lg'>
-          I&apos;m Fabian, a Software Engineer and Problem-Solver passionate about building scalable web applications. With expertise in full-stack development, I specialize in C# and React. I enjoy building innovative solutions, and contributing to the tech ecosystem.        
+        <p className='text-center md:tracking-wider mb-4 text-xs lg:text-sm'>
+          I&apos;m Fabian, a Software Engineer driven by a passion for building innovative web applications. With expertise in full-stack development, I specialize in crafting robust backends with C#/.NET, Node.js and dynamic user experiences with React. I thrive in fast-paced environments, love tackling technical challenges, and actively looking to contribute to the tech ecosystem through hands-on innovation and collaboration.       
         </p>
 
         <Link href="/#projects">

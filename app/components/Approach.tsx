@@ -12,9 +12,9 @@ const Approach = () => {
       </h1>
       <div className="my-10 flex flex-col lg:flex-row items-center justify-center gap-4">
         <Card 
-          title="Planning & Strategy" 
+          title="Planning & Design" 
           icon={<AceternityIcon order="Phase 1" />}
-          description="We'll collaborate to map out your website's goals, target audience, and key functionalities. We'll discuss things like site structure, navigation, and content requirements."
+          description="We'll collaborate to map out your website's goals, target audience, and key functionalities. We'll discuss things like site structure, architecture, and content requirements."
         >
             <CanvasRevealEffect
               animationSpeed={5.1}
@@ -107,12 +107,12 @@ const Card = ({
 };
 
 const AceternityIcon = ({order} : {order: string}) => {
-
+// bg-[conic-gradient(from_90deg_at_50%_50%,#3B82F6_0%,#ddd_50%,#3B82F6_100%)
   return (
     <div>
-      <button className="relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
-        <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
-        <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-blue-950 dark:bg-slate-950 p-3 md:px-5 py-2 text-white backdrop-blur-3xl text-sm md:text-2xl font-bold">
+      <button className="relative inline-flex h-12 overflow-hidden rounded-full p-[2px] dark:p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
+        <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite]  bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
+        <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full text-black bg-gray-50 dark:bg-slate-950 p-3 md:px-5 py-2 dark:text-white backdrop-blur-3xl text-sm md:text-2xl font-bold">
           {order}
         </span>
       </button>

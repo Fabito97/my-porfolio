@@ -72,69 +72,79 @@ export const gridItems = [
 export const projects = [
   {
     id: 1,
-    title: "Todo List task manager",
-    des: "A simple yet powerful Todo List app to help you manage your tasks efficiently using react and C#.",
-    img: "/p1.svg",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
-    link: "https://github.com/adrianhajdin?tab=repositories",
+    title: "Traidr E-commerce Platform",
+    des: "Full-stack MVP with Google Sign-In, live search, and PostgreSQL backend.",
+    img: "/traider.png",
+    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/c.svg"],
+    link: "https://github.com/Fabito97/traidr_e-commerce"
   },
   {
     id: 2,
     title: "AI Blogger Agent",
-    des: "A C# application that allows you to create, edit, and delete blog posts with AI assistance.",
-    img: "/p2.svg",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
-    link: "https://github.com/adrianhajdin/zoom-clone",
+    des: "AI-powered blogging platform built with C# and Gemini API.",
+    img: "/blog.png",
+    iconLists: ["/c.svg", "/re.svg"],
+    link: "https://github.com/telexintegrations/telex-blogger-agent"
   },
   {
     id: 3,
-    title: "AI Monitoring Agent - Backend API",
-    des: "A REAL AI agent that monitors your system and can interact with you to provide insights on your system behaviours.",
-    img: "/p3.svg",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
-    link: "https://github.com/adrianhajdin/ai_saas_app",
+    title: "AI Monitoring Agent",
+    des: "An AI monitoring agent for C# applications. Interacts with you about your system errors, traces and metrics",
+    img: "/monitor.png",
+    iconLists: ["/c.svg"],
+    link: "https://github.com/telexorg/vigil-apm-agent"
   },
   {
     id: 4,
-    title: "Gym Fitness App",
-    des: "A modern fitness app that helps you track your workouts, nutrition, and progress.",
-    img: "/p4.svg",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
-    link: "https://github.com/adrianhajdin/iphone",
+    title: "Contact Book API",
+    des: "JWT-secured .NET Web API for managing client contacts.",
+    img: "/contact.png",
+    iconLists: ["/c.svg"],
+    link: "https://github.com/Fabito97/contactbook_webapi"
   },
+  {
+    id: 5,
+    title: "Portfolio Management System",
+    des: "ASP.NET MVC app with admin editing and role-based access.",
+    img: "/porfolio.png",
+    iconLists: ["/c.svg"],
+    link: "https://github.com/Fabito97/portfolio_mvc"
+  },
+  {
+    id: 6,
+    title: "Todo List Task Manager",
+    des: "Simple task manager built with React and C# for productivity.",
+    img: "/todo.png",
+    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/c.svg"],
+    link: "https://toidotaskapp.netlify.app/"
+  }
 ];
 
 export const testimonials = [
   {
     quote:
-      "Collaborating with Fabian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Fabian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
+      "Working with Fabian was inspiring — he combines deep backend expertise with front-end finesse. His contributions at Penzra Hub consistently elevated our product quality and team morale.",
     name: "Lucky Otono",
-    title: "CEO of Penzra Hub"
+    title: "CEO, Penzra Hub"
   },
   {
     quote:
-      "Collaborating with Fabian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Fabian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Lucky Otono",
-    title: "CEO of Penzra Hub",
+      "Fabian is a sharp and reliable developer. I was impressed by his attention to detail and ability to deliver complex features under tight deadlines. He’s a problem-solver who brings clarity to the chaos.",
+    name: "Godwin Etebenueme",
+    title: "Team mate"
   },
   {
     quote:
-      "Collaborating with Fabian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Fabian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Lucky Otono",
-    title: "CEO of Penzra Hub"
+      "Few developers learn as quickly and adapt as smoothly as Fabian. He took ownership of backend API flows and even optimized areas beyond the initial scope. A solid contributor and communicator.",
+    name: "John Ansa",
+    title: "Senior Software Engineer"
   },
   {
     quote:
-      "Collaborating with Fabian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Fabian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Lucky Otono",
-    title: "CEO of Penzra Hub"
-  },
-  {
-    quote:
-      "Collaborating with Fabian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Fabian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Lucky Otono",
-    title: "CEO of Penzra Hub"
-  },
+      "Fabian’s energy is contagious. Whether it's refactoring legacy code or shipping MVP features, he jumps right in with thoughtful solutions and clear enthusiasm. He’s a builder at heart.",
+    name: "Amalachukwu Muoghalu",
+    title: "Protroleum Engineer"
+  }
 ];
 
 export const companies = [
@@ -173,46 +183,47 @@ export const companies = [
 export const workExperience = [
   {
     id: 1,
-    title: "Software Engineer Intern - Decagon Institute",
-    desc: "Assisted in the development of a web-based platform using React.js, enhancing interactivity.",
+    title: "Software Engineer Trainee – Decagon Institute",
+    desc: `Completed 500+ hours of hands-on training in React, .NET Core, PostgreSQL, and Agile/Scrum.\nLed development of a full-stack e-commerce MVP with Google Sign-In and real-time search features.\nOptimized Entity Framework queries, reducing database execution time by 30%.`,
     className: "md:col-span-2",
-    thumbnail: "/exp1.svg",
+    thumbnail: "/exp1.svg"
   },
   {
     id: 2,
-    title: "Backend Engineer Intern - HNG Tech",
-    desc: "Designed and developed mobile app for both iOS & Android platforms using React Native.",
-    className: "md:col-span-2", // change to md:col-span-2
-    thumbnail: "/exp2.svg",
+    title: "Backend Engineer Intern – HNG Tech",
+    desc: `Developed scalable APIs using .NET and Gemini API, supporting AI-driven blogging features for 500+ users.\nBuilt responsive React dashboards and automated Docker deployments, reducing release time by 20%.\nCreated real-time error logging middleware, cutting debug time by 20% through TDD.`,
+    className: "md:col-span-2",
+    thumbnail: "/exp2.svg"
   },
   {
     id: 3,
-    title: "Freelance Software Developer - Penzra Hub",
-    desc: "Led the dev of a mobile app for a client, from initial concept to deployment on app stores.",
-    className: "md:col-span-2", // change to md:col-span-2
-    thumbnail: "/exp3.svg",
+    title: "Volunteer Software Engineer – Penzra Hub",
+    desc: `Contributed to a travel app's backend with .NET Core and MongoDB, boosting request speed by 20%.\nEnhanced React-based driver onboarding flows, improving user experience by 15%.\nCollaborated in Agile sprints to deliver MVP functionality for real-world client needs.`,
+    className: "md:col-span-2",
+    thumbnail: "/exp3.svg"
   },
   {
     id: 4,
-    title: "Freelance Backend Developer - Telex.im",
-    desc: "Developed and maintained user-facing features using modern frontend technologies.",
+    title: "Freelance Backend Developer – Telex.im",
+    desc: `Built and maintained agent backend features using C#/.NET and MongoDB.\nAuthored integration guides that accelerated dev onboarding by 30%.\nDelivered scalable components for user-facing systems while supporting AI agent workflows.`,
     className: "md:col-span-2",
-    thumbnail: "/exp4.svg",
-  },
+    thumbnail: "/exp4.svg"
+  }
 ];
 
 export const skills = [
-          { name: "C#", icon: "/csharp.svg", level: 90},
-          { name: "React", icon: "/react.svg", level: 85 },
-          { name: "JavaScript", icon: "/javascript.svg", level: 80 },
-          { name: "TypeScript", icon: "/typescript.svg", level: 70 },
-          { name: "Node.js", icon: "/nodejs.svg", level: 80 },
-          { name: "Next.js", icon: "/nextjs.svg", level: 50 },
-          { name: "HTML", icon: "/html.svg", level: 95 },
-          { name: "CSS", icon: "/css.svg", level: 90 },
-          { name: "SQL", icon: "/sql.svg", level: 50 },
-          { name: "PostgresQL", icon: "/postgresql.svg", level: 80 },
-        ]
+  { name: "HTML", icon: "/html.svg", level: 95 },
+  { name: "CSS", icon: "/css.svg", level: 90 },
+  { name: "C#", icon: "/csharp.svg", level: 90},
+  { name: "JavaScript", icon: "/javascript.svg", level: 80 },
+  { name: "TypeScript", icon: "/typescript.svg", level: 70 },
+  { name: "React", icon: "/react.svg", level: 85 },
+  { name: "Node.js", icon: "/nodejs.svg", level: 80 },
+  { name: "Next.js", icon: "/nextjs.svg", level: 50 },
+  { name: "MSSQL", icon: "/sql.svg", level: 85 },
+  { name: "PostgresQL", icon: "/postgresql.svg", level: 80 },
+  { name: "MongoDb", icon: "/mongodb.svg", level: 70 },
+]
 
 export const socialMedia = [
   {
