@@ -184,28 +184,28 @@ export const workExperience = [
   {
     id: 1,
     title: "Software Engineer Trainee – Decagon Institute",
-    desc: "Completed 4 month intensive training in React, .NET Core, SQL Server, and Agile methodologies. Spearheaded the development of a full-stack e-commerce MVP featuring Google Sign-In and real-time search, and managed database efficiency using Entity Framework.",
+    desc: "Engaged in a 4-month intensive training in React, C# .NET Core, SQL Server, and Agile methodologies. Participated in series of code reviews and unblocking sessions to ensure delivery of weekly tasks. Spearheaded the development of a full-stack e-commerce MVP during a critical project phase, ensuring project delivery within the specified deadline",
     className: "md:col-span-2",
     thumbnail: "/exp1.svg"
   },
   {
     id: 2,
     title: "Backend Engineer Intern – HNG Tech",
-    desc: "Engineered RESTful APIs using .NET and the Gemini API to power AI-Agentic systems for task automation. Designed real-time error logging middleware leveraging TDD for faster debugging and an AI Blogging agent for task automation.",
+    desc: "Engineered RESTful APIs and optimized existing codebases while ensuring quality code and writing tests to reduce development errors. Worked on the development of AI agents for integration on Telex - an AI Agent collaboration platform using C# .NET and Leveraging Gemini APi",
     className: "md:col-span-2",
     thumbnail: "/exp2.svg"
   },
   {
     id: 3,
     title: "Volunteer Software Engineer – Penzra Hub",
-    desc: "Contributed to the backend development of a travel app using .NET Core and PostgreSQL, ensuring clean code and enhanced performance.",
+    desc: "Contributed to the backend development of a travel app using .NET Core and PostgreSQL, following clean code architecture and SOLID principle. Implemented API features for driver onboarding and data management.",
     className: "md:col-span-2",
     thumbnail: "/exp3.svg"
   },
   {
     id: 4,
     title: "Freelance Backend Developer – Telex.im",
-    desc: "Designed and maintained backend AI agent systems with C#/.NET and MongoDB including an AI Monitorin agent. Created internal integration guides to sped up team onboarding.",
+    desc: "Designed and maintained AI agent systems with C#/.NET and MongoDB to ensure that organizations on Telex can collaborate effectively with AI agent for task automation and execution. Created internal integration guides to sped up team onboarding and also executed tests using the AI agents to ensure that the core features of the platform is wworking correctly.",
     className: "md:col-span-2",
     thumbnail: "/exp4.svg"
   }
