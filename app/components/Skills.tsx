@@ -2,15 +2,15 @@ import { skills } from "@/data";
 
 const Skill = () => {
   return (
-    <div className="relative z-10 mb-10 lg:w-[80%] m-auto">
-      <h3 className="text-center text-3xl font-bold dark:text-blue-100 mb-6">
+    <div className="relative z-10 mb-10 lg:w-[80%] m-auto w-[100%]">
+      <h3 className="text-center text-2xl sm:text-3xl font-bold dark:text-blue-100 mb-6">
         Skills <span className="dark:text-purple">And Technologies</span> 
       </h3>
       <div className="flex flex-wrap justify-center gap-4 ">
         {skills.map((skill, index) => (
           <div
             key={index}
-            className="flex flex-col justify-center gap- px-4 py-2 dark:bg-black-100 bg-gray-50 w-[250px] h-[70px] dark:bg-blue-20 dark:text-white text-black-100 border border-[#ddd] rounded-2xl text-sm md:text-base lg:text-lg shadow-md"
+            className="flex flex-col justify-center gap- px-4 py-2 dark:bg-black-100 bg-gray-50 w-[80%] sm:w-[250px] h-[70px] dark:bg-blue-20 dark:text-white text-black-100 border border-[#ddd] rounded-2xl text-sm md:text-base lg:text-lg shadow-md"
           >
             <div className="flex items-center justify-between gap-2">
             <span>{skill.name}</span>

@@ -1,22 +1,26 @@
+'use client';
+
 import { projects } from "@/data"
 import { PinContainer } from "./ui/3d-pin"
 import { FaLocationArrow } from "react-icons/fa6"
+import Link from "next/link"
+import { useState } from "react"
 
 
 const RecentProjects = ({ isDark }:{ isDark:boolean }) => {
-
+const [pauseHover, setPauseHover] = useState(false);
   const color = isDark ? "#CBACF9" : "#3B82F6"
 
   return (
     <div className="py-12 md:py-12 " id="projects">
-      <h1 className="text-3xl text-center font-bold w-[90%] mx-auto">
+      <h1 className="text-2xl md:text-3xl text-center font-bold w-[90%] mx-auto">
         A small selection of  
          <span className="text-black-10 dark:text-purple"> recent projects</span>
       </h1>
-      <div className="flex flex-wrap items-center justify-center gap-x-20 gap-y-16 md:gap-y-10 lg:gap-y-20 p-4 mt-10">
-        {projects.map(({id, title, des, img, iconLists, link}) => (
+      <div className="flex flex-wrap items-center justify-center gap-x-20 gap-y-16 md:gap-y-10 lg:gap-y-20 p-4 sm:mt-10">
+        {projects.map(({id, title, des, img, iconLists, link, liveLink}) => (
           <div key={id} className="min-h-[28rem] sm:min-h-[30rem] md:min-h-[23rem] lg:min-h-[22.5rem] flex items-center justify-center md:w-[280px]  lg:w-[370px] w-[80vw]">
-            <PinContainer title={link} href={link}>
+            <PinContainer title={link} href={link} pauseHover={pauseHover}>
               <div className="relative flex items-center justify-center md:w-[280px] lg:w-[370px] w-[80vw] sm:h-[auto] h-[18rem] mb-5 rounded-3xl overflow-hidden">
                 <div className="relative w-full h-full overflow-hidden bg-[#13162d]">
                   <img src="/bg.png" alt="bg-img"/>
@@ -44,9 +48,14 @@ const RecentProjects = ({ isDark }:{ isDark:boolean }) => {
                     </div>
                   ))}
                 </div>
-                <div  className="flex justify-center items-center max-sm:w-[50%] text-center">
-                  <p className="text-xs text-[12px] md:text-xs sm:text-sm text-blue-500 dark:text-purple">Check Live Site</p>
-                  {<FaLocationArrow className="ms-2" color={color}/>}
+                <div onMouseLeave={() => setPauseHover(false)} onMouseOver={() => setPauseHover(true)} className="flex justify-center items-center max-sm:w-[50%] text-center">
+                 { liveLink && 
+                  <Link target="blank" 
+                  href={liveLink} 
+                  className="text-xs text-[12Linkx] md:text-xs sm:text-sm text-blue-500 dark:text-purple flex">
+                    Check Live Site
+                    {<FaLocationArrow className="ms-2" color={color}/>}
+                  </Link>}
                 </div>
               </div>
 

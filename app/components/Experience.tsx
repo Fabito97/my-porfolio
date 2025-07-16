@@ -23,7 +23,7 @@ const Experience = ({ isDark }:{ isDark:boolean}) => {
 
   return (
     <div className="md:py-24 py-16" id="projects">
-      <h1 className="headin text-3xl text-center font-bold w-[90%] mx-auto">
+      <h1 className="headin text-2xl sm:text-3xl text-center font-bold w-[90%] mx-auto">
         My
         <span className="text-blue-70 dark:text-purple"> Work Experience</span>
       </h1>
@@ -43,12 +43,12 @@ const Experience = ({ isDark }:{ isDark:boolean}) => {
                 className="lg:w-20 md:w-15 w-14"
               />
               <div className="lg:ms-5">
-                <h1 className="text-start text-xl md:text-2xl font-bold">
+                <h1 className="text-start text-sm sm:text-xl md:text-2xl font-bold">
                   {card.title}
                 </h1>
                 <p
                   style={{ whiteSpace: "pre-wrap" }}
-                  className="text-start text-black-200 dark:text-white-100 mt-3 font-semibold"
+                  className="text-start text-gray-500 dark:text-white-100 mt-3 dark:font-normal font-semibold"
                 >
                   {card.desc}
                 </p>

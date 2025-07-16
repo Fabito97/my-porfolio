@@ -72,52 +72,90 @@ export const gridItems = [
 export const projects = [
   {
     id: 1,
-    title: "Traidr E-commerce Platform",
-    des: "Full-stack MVP with Google Sign-In, live search, and PostgreSQL backend.",
-    img: "/traider.png",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/c.svg"],
-    link: "https://github.com/Fabito97/traidr_e-commerce"
+    title: "Personal Memorial Website",
+    des: "A platform to honor my grandmother, built with React, Node.js, and Express. Features API-driven tribute management and a responsive UI.",
+    img: "/memorial.png",
+    iconLists: ["/re.svg"],
+    link: "https://github.com/Fabito97/memorial-website",
+    liveLink: "https://roseline-memorial.onrender.com/",
+    demo: "[your-demo-link, if applicable]",
+    techStack: ["React", "Node.js", "Express", "JavaScript"],
+    role: "Full-Stack Developer",
+    timeline: "[Month Year, e.g., May 2025]"
   },
   {
     id: 2,
-    title: "AI Blogger Agent",
-    des: "AI-powered blogging platform built with C# and Gemini API.",
-    img: "/blog.png",
-    iconLists: ["/c.svg", "/re.svg"],
-    link: "https://github.com/telexintegrations/telex-blogger-agent"
+    title: "Telex AI Monitoring Agent",
+    des: "AI agent for monitoring C# applications, tracking errors and metrics with .NET Core and MongoDB.",
+    img: "/monitor.png",
+    iconLists: ["/c.svg"],
+    link: "https://github.com/telexorg/vigil-apm-agent",
+    demo: "[your-demo-link, if applicable]",
+    techStack: [".NET Core", "MongoDB"],
+    role: "Backend Developer",
+    timeline: "Jan 2025 – Mar 2025"
   },
   {
     id: 3,
-    title: "AI Monitoring Agent",
-    des: "An AI monitoring agent for C# applications. Interacts with you about your system errors, traces and metrics",
-    img: "/monitor.png",
+    title: "Telex AI Blogger Agent",
+    des: "An AI-powered blogging agent using .NET Core, MongoDB, and Gemini API, with developer guides for agent integration.",
+    img: "/blog.png",
     iconLists: ["/c.svg"],
-    link: "https://github.com/telexorg/vigil-apm-agent"
+    link: "https://github.com/telexintegrations/telex-blogger-agent",
+    demo: "[your-demo-link, if applicable]",
+    techStack: [".NET Core", "MongoDB", "Gemini API"],
+    role: "Backend Developer",
+    timeline: "Jan 2025 – Apr 2025"
   },
   {
     id: 4,
-    title: "Contact Book API",
-    des: "JWT-secured .NET Web API for managing client contacts.",
-    img: "/contact.png",
-    iconLists: ["/c.svg"],
-    link: "https://github.com/Fabito97/contactbook_webapi"
+    title: "Traidr E-commerce Platform",
+    des: "Full-stack MVP with Google Sign-In and real-time search, built using React, .NET Core, and PostgreSQL in an Agile team.",
+    img: "/traider.png",
+    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/c.svg"],
+    link: "https://github.com/Fabito97/traidr_e-commerce",
+    demo: "[your-demo-link, if applicable]",
+    techStack: ["React", "Tailwind CSS", "TypeScript", ".NET Core", "PostgreSQL"],
+    role: "Full-Stack Developer",
+    timeline: "Jul 2024 – Nov 2024"
   },
   {
     id: 5,
-    title: "Portfolio Management System",
-    des: "ASP.NET MVC app with admin editing and role-based access.",
-    img: "/porfolio.png",
-    iconLists: ["/c.svg"],
-    link: "https://github.com/Fabito97/portfolio_mvc"
+    title: "Todo List Task Manager",
+    des: "Task manager built with React and .NET Core for productivity, featuring a responsive UI.",
+    img: "/todo.png",
+    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/c.svg"],
+    link: "https:///github.com/Fabito97/todolist/",
+    liveLink: "https://toidotaskapp.netlify.app/",
+    demo: "https://toidotaskapp.netlify.app/",
+    techStack: ["React", "Tailwind CSS", "TypeScript", ".NET Core"],
+    role: "Full-Stack Developer",
+    timeline: "[Month Year]"
   },
   {
     id: 6,
-    title: "Todo List Task Manager",
-    des: "Simple task manager built with React and C# for productivity.",
-    img: "/todo.png",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/c.svg"],
-    link: "https://toidotaskapp.netlify.app/"
-  }
+    title: "Contact Book API",
+    des: "JWT-secured .NET Web API for managing client contacts, built with clean code principles.",
+    img: "/contact.png",
+    iconLists: ["/c.svg"],
+    link: "https://github.com/Fabito97/contactbook_webapi",
+    demo: "[your-demo-link, if applicable]",
+    techStack: [".NET Core"],
+    role: "Backend Developer",
+    timeline: "[Month Year]"
+  },
+  // {
+  //   id: 6,
+  //   title: "Portfolio Management System",
+  //   des: "ASP.NET MVC app with admin editing and role-based access control for portfolio management.",
+  //   img: "/portfolio.png",
+  //   iconLists: ["/c.svg"],
+  //   link: "https://github.com/Fabito97/portfolio_mvc",
+  //   demo: "[your-demo-link, if applicable]",
+  //   techStack: [".NET Core", "ASP.NET MVC"],
+  //   role: "Full-Stack Developer",
+  //   timeline: "[Month Year]"
+  // },
 ];
 
 export const testimonials = [
@@ -191,21 +229,21 @@ export const workExperience = [
   {
     id: 2,
     title: "Backend Engineer Intern – HNG Tech",
-    desc: "Engineered RESTful APIs and optimized the existing codebase, ensuring quality code and writing tests for reliable deployments. Developed agentic systems using C#/.NET for integration on an AI agent platform",
+    desc: "Engineered RESTful APIs and optimized the existing codebase, while ensuring quality code and writing tests for reliable deployments. Developed agents/integrations using C#/.NET for Telex AI agent platform",
     className: "md:col-span-2",
     thumbnail: "/exp2.svg"
   },
   {
     id: 3,
     title: "Volunteer Software Engineer – Penzra Hub",
-    desc: "Developed APIs for a travel app using .NET Core and PostgreSQL, adhering to clean code and SOLID principles. Implemented features for driver onboarding and data management.",
+    desc: "Contributed to the development of backend API for a travel app using .NET Core and PostgreSQL, adhering to clean code and SOLID principles. Implemented features for driver onboarding and data management.",
     className: "md:col-span-2",
     thumbnail: "/exp3.svg"
   },
   {
     id: 4,
     title: "Freelance Backend Developer – Telex.im",
-    desc: "Designed AI agent systems using .NET Core and MongoDB for Telex. Authored developer guides for building agents and tested workflows for reliability.",
+    desc: "Designed AI agent systems using .NET Core and MongoDB for the Agent platform. Authored developer guides for utilizing and integrating agents and tested workflows for reliability.",
     className: "md:col-span-2",
     thumbnail: "/exp4.svg"
   }

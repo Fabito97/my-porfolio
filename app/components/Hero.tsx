@@ -31,11 +31,11 @@ const Hero = () => {
         </h2>
 
         <TextGenerateEffect 
-          className='text-center text-[40px] md:text-5xl lg:text-6xl'
+          className='text-center text-3xl sm:text-[40px] md:text-5xl lg:text-6xl'
           words='Software Engineer'
         />
 
-        <p className='text-center md:tracking-wider mb-4 text-xs lg:text-sm'>
+        <p className='text-center md:tracking-wider mb-8 md:mb-4 text-xs lg:text-sm'>
           I&apos;m Fabian, a Software Engineer driven by a passion for building innovative web applications. With expertise in full-stack development, I specialize in crafting robust backends with C#/.NET, Node.js and dynamic user experiences with React. I thrive in fast-paced environments, love tackling technical challenges, and actively looking to contribute to the tech ecosystem through hands-on innovation and collaboration.       
         </p>
 
