@@ -10,6 +10,7 @@ import MagicButton from "./ui/MagicButton";
 import { BackgroundGradientAnimation } from "./ui/GradientBg";
 import Link from "next/link";
 import dynamic from "next/dynamic";
+import { config } from "@/lib/config";
 
 const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 
@@ -22,7 +23,7 @@ const Experience = ({ isDark }:{ isDark:boolean}) => {
   };
 
   return (
-    <div className="md:py-24 py-16" id="projects">
+    <div className="md:py-24 py-16" id="experience">
       <h1 className="headin text-2xl sm:text-3xl text-center font-bold w-[90%] mx-auto">
         My
         <span className="text-blue-70 dark:text-purple"> Work Experience</span>
@@ -62,7 +63,7 @@ const Experience = ({ isDark }:{ isDark:boolean}) => {
         <div
         style={{ textShadow: isDark ? "0 2px 4px rgba(0, 0, 0, 0.3)": "" }}
         className="font-sans font-extralighttext-[#c1c2d3] text-xl sm:text-3xl z-10 text-center font-bold px-16">
-          Do you want to hire me or start a project together
+          Do you want explore my skills or start a project together
         </div>
         <div className="relative">
           <div className={`absolute -bottom-5 right-0`}>
@@ -75,7 +76,7 @@ const Experience = ({ isDark }:{ isDark:boolean}) => {
           </div>
           <Link
             href={
-              "https://drive.google.com/file/d/1jx9F3NQYSFiof0KycziVNK8h44Eol2bg/view?usp=sharing"
+              config.resumeUrl || "https://drive.google.com/file/d/1xfBY4heaS8FmCUWWPOdZwZNXC04INL6z/view?usp=sharing"
             }
             target="blank"
           >
