@@ -1,19 +1,19 @@
 "use client";
 
-import Hero from "./components/Hero";
-import Skills from "./components/Skills";
-import { FloatingNav } from "./components/ui/FloatingNav";
-import RecentProjects from "./components/RecentProjects";
+import Hero from "../components/Hero";
+import Skills from "../components/Skills";
+import { FloatingNav } from "../components/ui/FloatingNav";
+import RecentProjects from "../components/RecentProjects";
 import { navItems, socialMedia } from "@/data";
-import Clients from "./components/Clients";
-import Experience from "./components/Experience";
-import Approach from "./components/Approach";
-import Footer from "./components/Footer";
+import Clients from "../components/Clients";
+import Experience from "../components/Experience";
+import Approach from "../components/Approach";
+import Footer from "../components/Footer";
 import { useTheme } from "next-themes";
-import ThemeToggle from "./components/ui/ThemeToggle";
-import Grid from "./components/Grid";
+import ThemeToggle from "../components/ui/ThemeToggle";
+import Grid from "../components/Grid";
 import Link from "next/link";
-import Socials from "./components/ui/Socials";
+import Socials from "../components/ui/Socials";
 
 export default function Home() {
   const { theme, setTheme } = useTheme();

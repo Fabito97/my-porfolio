@@ -6,8 +6,8 @@ import { ThemeProvider } from "./provider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Fabian Muoghalu",
-  description: "A modern & Minimalist Portfolio",
+  title: "Fabian Muoghalu | Software Developer",
+  description: "Software Developer",
   icons: [
     { rel: 'icon', type: 'image/png', sizes: '32x32', url: '/profile-image.png' },
     { rel: 'apple-touch-icon', sizes: '180x180', url: '/profile-image.png' },
