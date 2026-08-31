@@ -21,7 +21,7 @@ export default function Navbar() {
     { name: "Projects", href: "/projects" },
     { name: "Experience", href: "/experience" },
     { name: "Writing", href: "/writing" },
-    { name: "Learning", href: "/learning" },
+    // { name: "Learning", href: "/learning" },
     { name: "Contact", href: "/contact" },
   ];
 
@@ -68,7 +68,7 @@ export default function Navbar() {
 
         {/* Right Section Actions */}
         <div className="flex items-center gap-2">
-          {/* Admin Dashboard Quick Access */}
+          {/* Admin Dashboard Quick Access
           <Link
             href="/admin"
             title="Admin Content Manager"
@@ -76,7 +76,7 @@ export default function Navbar() {
           >
             <Shield className="w-3.5 h-3.5 text-blue-500" />
             <span className="hidden lg:inline text-[11px]">CMS</span>
-          </Link>
+          </Link> */}
 
           {/* Theme Toggle Button */}
           {mounted && (
