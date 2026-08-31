@@ -64,7 +64,7 @@ const Hero: React.FC<HeroProps> = ({ profile }) => {
           </div>
 
           {/* Direct Social Links */}
-          <div className="flex flex-col-reverse sm:flex-row items-center justify-center gap-3 pt-1 text-xs font-mono text-muted-foreground">
+          <div className="flex flex-col-reverse sm:flex-row items-center justify-center gap-1 sm:gap-3 pt-1 text-xs font-mono text-muted-foreground">
             <div className="flex items-center justify-center gap-3">
               <span className="text-muted-foreground/60">Links:</span>
               <a
@@ -94,6 +94,7 @@ const Hero: React.FC<HeroProps> = ({ profile }) => {
               >
                 <FaXTwitter className="w-4 h-4" />
               </a>
+            </div>
               <span className="text-border">|</span>
               <a
                 href={`mailto:${profile.email}`}
@@ -101,7 +102,6 @@ const Hero: React.FC<HeroProps> = ({ profile }) => {
               >
                 {profile.email}
               </a>
-            </div>
           </div>
         </div>
 
