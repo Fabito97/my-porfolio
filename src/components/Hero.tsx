@@ -109,7 +109,7 @@ const Hero: React.FC<HeroProps> = ({ profile }) => {
         <div className="shrink-0 flex justify-center ">
           <div className="relative w-36 h-36 sm:w-44 sm:h-44 rounded-full overflow-hidden bg-secondary border border-border/80 shadow-md">
             <Image
-              src="/profile-image.png"
+              src="/profile-image.jpeg"
               alt="Fabian Muoghalu"
               fill
               sizes="(max-width: 768px) 104px, 126px"
