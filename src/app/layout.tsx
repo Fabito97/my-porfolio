@@ -1,17 +1,23 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Plus_Jakarta_Sans, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "./provider";
+import Navbar from "@/components/Navbar";
+import FooterEditorial from "@/components/FooterEditorial";
 
-const inter = Inter({ subsets: ["latin"] });
+const jakarta = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  variable: "--font-sans",
+});
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  variable: "--font-mono",
+});
 
 export const metadata: Metadata = {
-  title: "Fabian Muoghalu | Software Developer",
-  description: "Software Developer",
-  icons: [
-    { rel: 'icon', type: 'image/png', sizes: '32x32', url: '/profile-image.png' },
-    { rel: 'apple-touch-icon', sizes: '180x180', url: '/profile-image.png' },
-  ],
+  title: "Fabian Muoghalu — Software Engineer",
+  description: "Software Engineer with backend strengths in .NET Core, C#, Node.js, and TypeScript. Personal brand platform featuring projects, writing, learning, and experience.",
 };
 
 export default function RootLayout({
@@ -20,15 +26,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${inter.className}`}>
+    <html lang="en" suppressHydrationWarning className={`${jakarta.variable} ${jetbrainsMono.variable}`}>
+      <body className="font-sans min-h-screen flex flex-col bg-background text-foreground antialiased">
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
+          defaultTheme="dark"
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <Navbar />
+          <div className="flex-1 max-w-6xl w-full mx-auto px-4 sm:px-6 py-8">
+            {children}
+          </div>
+          <FooterEditorial />
         </ThemeProvider>
       </body>
     </html>
