@@ -50,7 +50,7 @@ export default function ContactPage() {
               </a>
 
               <a
-                href="https://linkedin.com/in/fabian-muoghalu"
+                href="https://www.linkedin.com/in/fabian-muoghalu-37aa7a1a9/"
                 target="_blank"
                 rel="noreferrer"
                 className="flex items-start gap-3 p-3 rounded-lg hover:bg-secondary transition-colors group"

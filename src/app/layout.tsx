@@ -16,8 +16,8 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Fabian Muoghalu — Software Engineer",
-  description: "Software Engineer with backend strengths in .NET Core, C#, Node.js, and TypeScript. Personal brand platform featuring projects, writing, learning, and experience.",
+  title: "Fabian Muoghalu - Software Engineer",
+  description: "Software Engineer with backend strengths in C# .NET Core, Python, TypeScript, and AI agents.",
 };
 
 export default function RootLayout({

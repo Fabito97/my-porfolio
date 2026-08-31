@@ -17,7 +17,7 @@ export default function ExperiencePage() {
           Engineering Work History & Impact
         </h1>
         <p className="text-muted-foreground text-base max-w-2xl leading-relaxed">
-          My professional journey as a software engineer—building C# .NET AI webhook agents, architecting backend APIs, and contributing to technical mentorship.
+          My professional journey as a software engineer: building backend services, AI agents, and production software.
         </p>
       </div>
 

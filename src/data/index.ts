@@ -93,7 +93,7 @@ export const projects = [
     demo: "[your-demo-link, if applicable]",
     techStack: [".NET Core", "MongoDB"],
     role: "Backend Developer",
-    timeline: "Jan 2025 – Mar 2025"
+    timeline: "Jan 2025 - Mar 2025"
   },
   {
     id: 3,
@@ -105,7 +105,7 @@ export const projects = [
     demo: "[your-demo-link, if applicable]",
     techStack: [".NET Core", "MongoDB", "Gemini API"],
     role: "Backend Developer",
-    timeline: "Jan 2025 – Apr 2025"
+    timeline: "Jan 2025 - Apr 2025"
   },
   {
     id: 4,
@@ -117,7 +117,7 @@ export const projects = [
     demo: "[your-demo-link, if applicable]",
     techStack: ["React", "Tailwind CSS", "TypeScript", ".NET Core", "PostgreSQL"],
     role: "Full-Stack Developer",
-    timeline: "Jul 2024 – Nov 2024"
+    timeline: "Jul 2024 - Nov 2024"
   },
   {
     id: 5,
@@ -161,13 +161,13 @@ export const projects = [
 export const testimonials = [
   {
     quote:
-      "Working with Fabian was inspiring — he combines deep backend expertise with front-end finesse. His contributions at Penzra Hub consistently elevated our product quality and team morale.",
+      "Working with Fabian was inspiring. He combines deep backend expertise with front-end finesse. His contributions at Penzra Hub consistently elevated our product quality and team morale.",
     name: "Lucky Otono",
     title: "CEO, Penzra Hub"
   },
   {
     quote:
-      "Fabian is a sharp and reliable developer. I was impressed by his attention to detail and ability to deliver complex features under tight deadlines. He’s a problem-solver who brings clarity to the chaos.",
+      "Fabian is a sharp and reliable developer. I was impressed by his attention to detail and ability to deliver complex features under tight deadlines. He is a problem-solver who brings clarity to the chaos.",
     name: "Godwin Etebenueme",
     title: "Team mate"
   },
@@ -179,7 +179,7 @@ export const testimonials = [
   },
   {
     quote:
-      "Fabian’s energy is contagious. Whether it's refactoring legacy code or shipping MVP features, he jumps right in with thoughtful solutions and clear enthusiasm. He’s a builder at heart.",
+      "Fabian's energy is contagious. Whether it's refactoring legacy code or shipping MVP features, he jumps right in with thoughtful solutions and clear enthusiasm. He is a builder at heart.",
     name: "Amalachukwu",
     title: "Protroleum Engineer"
   }
@@ -221,28 +221,28 @@ export const companies = [
 export const workExperience = [
   {
     id: 1,
-    title: "Software Engineer Trainee – Decagon Institute",
+    title: "Software Engineer Trainee - Decagon Institute",
     desc: "Completed 4-month training in React, .NET Core, PostgreSQL, and Agile methodologies, delivering weekly tasks. Spearheaded the development of a full-stack e-commerce MVP with real-time features during final project phase.",
     className: "md:col-span-2",
     thumbnail: "/exp1.svg"
   },
   {
     id: 2,
-    title: "Backend Engineer Intern – HNG Tech",
+    title: "Backend Engineer Intern - HNG Tech",
     desc: "Engineered RESTful APIs and optimized the existing codebase, while ensuring quality code and writing tests for reliable deployments. Developed agents/integrations using C#/.NET for Telex AI agent platform",
     className: "md:col-span-2",
     thumbnail: "/exp2.svg"
   },
   {
     id: 3,
-    title: "Volunteer Software Engineer – Penzra Hub",
+    title: "Volunteer Software Engineer - Penzra Hub",
     desc: "Contributed to the development of backend API for a travel app using .NET Core and PostgreSQL, adhering to clean code and SOLID principles. Implemented features for driver onboarding and data management.",
     className: "md:col-span-2",
     thumbnail: "/exp3.svg"
   },
   {
     id: 4,
-    title: "Freelance Backend Developer – Telex.im",
+    title: "Freelance Backend Developer - Telex.im",
     desc: "Designed AI agent systems using .NET Core and MongoDB for the Agent platform. Authored developer guides for utilizing and integrating agents and tested workflows for reliability.",
     className: "md:col-span-2",
     thumbnail: "/exp4.svg"

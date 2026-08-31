@@ -5,16 +5,16 @@ import path from 'path';
 export const initialProfile: SiteProfile = {
   name: "Fabian Muoghalu",
   title: "Software Engineer",
-  headline: "Full-Stack and Backend Software Engineer specializing in C#/.NET, Python, TypeScript, and AI-powered systems.",
-  bio: "Full-Stack and Backend Software Engineer with experience building web applications, microservices, and AI-powered systems. Skilled in C#/.NET, Python (FastAPI), TypeScript (Node.js), and React/Next.js, with hands-on experience deploying containerized applications using Docker, Nginx, and AWS. Experienced in building AI workflows, RAG systems, REST APIs, and CI/CD pipelines. Comfortable using modern AI development tools (Cursor, Claude, Copilot) to write clean code efficiently.",
-  philosophy: "LEARN → BUILD → SHARE → CONTRIBUTE",
+  headline: "Backend systems, web applications, and AI agents.",
+  bio: "Software Engineer with a background in English and Literature (University of Benin) and training in full-stack software development. Experienced with C# .NET, Python (FastAPI), TypeScript, relational databases, and AI agent workflows.",
+  philosophy: "Acquire -> Build -> Value -> Teach",
   location: "Nigeria",
   email: "fabianmuoghalu97@gmail.com",
   github: "https://github.com/Fabito97",
-  linkedin: "https://linkedin.com/in/fabian-muoghalu",
+  linkedin: "https://www.linkedin.com/in/fabian-muoghalu-37aa7a1a9/",
   twitter: "https://x.com/Fabito97",
   availableForHire: true,
-  currentFocus: "Engineering agentic AI support workflows, RAG retrieval pipelines, and ASP.NET Core microservices.",
+  currentFocus: "Backend APIs and AI agent workflows.",
 };
 
 export const initialProjects: Project[] = [
@@ -298,7 +298,7 @@ export const initialExperience: ExperienceEntry[] = [
     company: "Freelance",
     role: "Freelance Software Engineer",
     employmentType: "Freelance / Contract",
-    period: "Jan 2025 — Present",
+    period: "Jan 2025 - Present",
     location: "Remote",
     description: "Architecting web applications, custom CMS solutions, and AI support automation for clients.",
     responsibilities: [
@@ -316,10 +316,10 @@ export const initialExperience: ExperienceEntry[] = [
   },
   {
     id: "telex-volunteer",
-    company: "Telex – AI Agent Collaborative Platform",
+    company: "Telex - AI Agent Collaborative Platform",
     role: "Volunteer Software Engineer",
     employmentType: "Volunteer / Remote",
-    period: "Apr 2025 — Dec 2025",
+    period: "Apr 2025 - Dec 2025",
     location: "Remote",
     description: "Designed and implemented backend APIs and Semantic Kernel orchestration pipelines supporting AI agent workflows.",
     responsibilities: [
@@ -343,7 +343,7 @@ export const initialExperience: ExperienceEntry[] = [
     company: "HNG Tech (HNG 12 Internship)",
     role: "Backend Engineer (Finalist)",
     employmentType: "Internship / Remote",
-    period: "Feb 2025 — Apr 2025",
+    period: "Feb 2025 - Apr 2025",
     location: "Remote",
     description: "Built RESTful APIs, AI-driven backend services, and automated CI/CD pipelines to AWS EC2.",
     responsibilities: [
@@ -381,10 +381,18 @@ export const initialExperience: ExperienceEntry[] = [
 
 export const initialContributions: Contribution[] = [
   {
+    id: "edu-uniben",
+    title: "B.A.(Ed) in English and Literature",
+    type: "Guide / Tutorial",
+    description: "University of Benin (2023). Strong foundation in critical thinking, linguistic precision, structured reasoning, and technical communication.",
+    date: "2023",
+    badge: "University of Benin"
+  },
+  {
     id: "cert-decagon",
     title: "Software Engineering Certificate",
     type: "Guide / Tutorial",
-    description: "Comprehensive software engineering program covering C#/.NET, system design, databases, and full-stack development.",
+    description: "Decagon Institute (2024). Intensive software engineering program covering C#/.NET Core, system design, relational databases, and full-stack development.",
     date: "2024",
     badge: "Decagon Institute"
   },
@@ -392,7 +400,7 @@ export const initialContributions: Contribution[] = [
     id: "cert-hng",
     title: "Backend Development Certificate",
     type: "Open Source",
-    description: "HNG 12 Internship Backend Engineering Finalist certification for building production-ready .NET microservices.",
+    description: "HNG 12 Backend Engineering Finalist certification for building production-ready C#/.NET APIs and microservices.",
     date: "2025",
     badge: "HNG Tech"
   },

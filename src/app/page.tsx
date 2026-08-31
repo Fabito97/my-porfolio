@@ -15,7 +15,9 @@ import {
   Zap,
   ExternalLink,
   ShieldCheck,
-  Layers
+  Layers,
+  Calendar,
+  MapPin
 } from "lucide-react";
 import { FaGithub } from "react-icons/fa6";
 
@@ -34,15 +36,15 @@ export default function Home() {
 
       {/* 2. Core Technical Focus (FIRST AFTER HERO) */}
       <section className="space-y-8">
-        <div className="border-b border-border/80 pb-4">
-          <div className="inline-flex items-center gap-1.5 text-xs font-mono font-bold uppercase tracking-wider text-amber-500">
+        <div className="border-b border-border/80 pb-4 text-center flex flex-col items-center justify-center">
+          <div className="inline-flex items-center justify-center gap-1.5 text-xs font-mono font-bold uppercase tracking-wider text-amber-500">
             <Layers className="w-3.5 h-3.5" />
             <span>Technical Capabilities</span>
           </div>
           <h2 className="text-2xl sm:text-4xl font-extrabold tracking-tight text-foreground mt-1">
             Core Tech Stack
           </h2>
-          <p className="text-sm text-muted-foreground mt-1 max-w-2xl">
+          <p className="text-sm text-center text-muted-foreground mt-1 max-w-2xl">
             Technologies and frameworks I use to build production backend software and AI agent workflows.
           </p>
         </div>
@@ -253,78 +255,77 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 4. Career Timeline Summary & Active Tech Roadmap */}
+      {/* 4. Career Timeline Summary */}
       <section className="space-y-8 pt-4 border-t border-border/80">
-        <div className="flex items-center justify-between">
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-3 border-b border-border/80 pb-4">
           <div>
-            <span className="text-xs font-mono font-bold uppercase tracking-wider text-primary block">
-              Experience & Growth
-            </span>
-            <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-foreground">
-              Career History & Active Focus
+            <div className="inline-flex items-center gap-1.5 text-xs font-mono font-bold uppercase tracking-wider text-primary">
+              <Briefcase className="w-3.5 h-3.5 text-emerald-500" />
+              <span>Experience & Growth</span>
+            </div>
+            <h2 className="text-2xl sm:text-4xl font-extrabold tracking-tight text-foreground mt-1">
+              Career History
             </h2>
           </div>
-          <Link href="/experience" className="text-xs font-mono text-primary hover:underline">
-            View Full Timeline →
+          <Link 
+            href="/experience" 
+            className="text-xs font-mono font-medium text-primary hover:underline inline-flex items-center gap-1 shrink-0"
+          >
+            <span>View Full Timeline ({experience.length})</span>
+            <ArrowRight className="w-3.5 h-3.5" />
           </Link>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
-          {/* Career Roles */}
-          <div className="lg:col-span-7 space-y-4">
-            {experience.map((exp) => (
-              <div key={exp.id} className="p-6 rounded-2xl border border-border/80 bg-card space-y-3 shadow-sm">
-                <div className="flex items-start justify-between gap-2">
-                  <div>
-                    <h3 className="text-base font-bold text-foreground">{exp.role}</h3>
-                    <p className="text-xs font-mono text-primary flex items-center gap-1 mt-0.5">
-                      <Briefcase className="w-3.5 h-3.5 text-emerald-500" /> {exp.company}
-                    </p>
-                  </div>
-                  <span className="text-[11px] font-mono px-2.5 py-0.5 rounded bg-secondary text-muted-foreground shrink-0 border border-border/50">
-                    {exp.period}
-                  </span>
+        {/* Experience Connected Vertical Pipeline Timeline */}
+        <div className="relative pl-6 sm:pl-8 border-l-2 border-primary/30 space-y-10">
+          {experience.map((exp, idx) => (
+            <div key={exp.id} className="relative space-y-3">
+              {/* Timeline Indicator Dot */}
+              <div className="absolute -left-[31px] sm:-left-[39px] top-1 w-5 h-5 rounded-full bg-background border-2 border-primary flex items-center justify-center">
+                <div className={`w-2 h-2 rounded-full ${idx === 0 ? "bg-emerald-500 animate-pulse" : "bg-amber-500"}`}></div>
+              </div>
+
+              {/* Role & Company Header */}
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-border/60 pb-2.5">
+                <div>
+                  <h3 className="text-lg sm:text-xl font-bold text-foreground">{exp.role}</h3>
+                  <p className="text-xs font-mono text-primary flex items-center gap-2 mt-0.5">
+                    <span className="font-bold text-foreground">{exp.company}</span>
+                    <span>·</span>
+                    <span className="text-muted-foreground">{exp.employmentType}</span>
+                  </p>
                 </div>
-                <p className="text-xs text-muted-foreground leading-relaxed line-clamp-3">
-                  {exp.description}
-                </p>
-              </div>
-            ))}
-          </div>
 
-          {/* Active Learning Focus */}
-          <div className="lg:col-span-5 space-y-4">
-            <div className="p-6 rounded-2xl bg-secondary/30 border border-border/80 space-y-4">
-              <div className="flex items-center justify-between border-b border-border/60 pb-3">
-                <h3 className="text-xs font-mono font-bold uppercase tracking-wider text-amber-500">
-                  Active Tech Roadmap
-                </h3>
-                <Link href="/learning" className="text-xs font-mono text-primary hover:underline">
-                  View Roadmap →
-                </Link>
-              </div>
-
-              <div className="space-y-3">
-                {learning.map((item) => (
-                  <div key={item.id} className="p-4 rounded-xl bg-card border border-border/80 space-y-1.5">
-                    <div className="flex items-center justify-between">
-                      <h4 className="text-xs font-bold text-foreground">{item.topic}</h4>
-                      <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-amber-500/10 text-amber-600 dark:text-amber-400 border border-amber-500/20 font-semibold">
-                        {item.status}
-                      </span>
-                    </div>
-                    <p className="text-xs text-muted-foreground leading-relaxed">
-                      {item.whyLearning}
-                    </p>
+                <div className="flex flex-wrap sm:flex-col sm:items-end gap-2 sm:gap-1 text-xs font-mono text-muted-foreground shrink-0">
+                  <div className="flex items-center gap-1">
+                    <Calendar className="w-3.5 h-3.5 text-emerald-500" />
+                    <span>{exp.period}</span>
                   </div>
+                  <div className="flex items-center gap-1">
+                    <MapPin className="w-3.5 h-3.5 text-amber-500" />
+                    <span>{exp.location}</span>
+                  </div>
+                </div>
+              </div>
+
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                {exp.description}
+              </p>
+
+              {/* Tech Stack Chips */}
+              <div className="flex flex-wrap gap-1.5 font-mono text-xs pt-1">
+                {exp.techStack.map((tech) => (
+                  <span key={tech} className="px-2.5 py-0.5 rounded bg-secondary text-foreground text-[11px] border border-border/50">
+                    {tech}
+                  </span>
                 ))}
               </div>
             </div>
-          </div>
+          ))}
         </div>
       </section>
 
-      {/* 5. Technical Articles / Engineering Writing (LAST BEFORE CTA) */}
+      {/* 5. Technical Articles / Engineering Writing (LAST BEFORE CTA)
       <section className="space-y-8 pt-4 border-t border-border/80">
         <div className="flex items-center justify-between border-b border-border/80 pb-4">
           <div>
@@ -384,7 +385,7 @@ export default function Home() {
             </article>
           ))}
         </div>
-      </section>
+      </section> */}
 
       {/* 6. Call to Action Banner (FINAL SECTION BEFORE FOOTER) */}
       <section className="p-8 sm:p-14 rounded-3xl bg-card border-2 border-primary/20 text-center space-y-6 shadow-xl relative overflow-hidden">
