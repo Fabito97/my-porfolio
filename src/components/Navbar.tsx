@@ -44,7 +44,7 @@ export default function Navbar() {
               Fabian Muoghalu
             </span>
             <span className="text-[11px] font-mono text-muted-foreground hidden sm:inline-block">
-              Software Engineer · Builder
+              Software Engineer
             </span>
           </div>
         </Link>

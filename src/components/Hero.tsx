@@ -22,9 +22,9 @@ interface HeroProps {
 const Hero: React.FC<HeroProps> = ({ profile }) => {
   return (
     <section className="relative pt-4 pb-10 sm:pb-14 border-b border-border/80 min-h-[90vh]">
-      <div className="flex flex-col-reverse md:flex-ro items-center md:items-star justify-center gap-8 sm:gap-12 md:pt-10">
+      <div className="flex flex-col-reverse md:flex-ro items-center md:items-star justify-center gap-6 sm:gap-8 md:pt-10">
         {/* Left Column: Identity & Actions */}
-        <div className="flex-1 space-y-6 text-left w-full text-center">
+        <div className="flex-1 space-y-6 w-full text-center flex flex-col justify-center items-center">
           {/* Status Badge */}
           <div className="inline-flex justify-center items-center gap-2 px-3 py-1 rounded-full text-xs font-mono bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
             <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
@@ -66,7 +66,7 @@ const Hero: React.FC<HeroProps> = ({ profile }) => {
           {/* Direct Social Links */}
           <div className="flex flex-col-reverse sm:flex-row items-center justify-center gap-1 sm:gap-3 pt-1 text-xs font-mono text-muted-foreground">
             <div className="flex items-center justify-center gap-3">
-              <span className="text-muted-foreground/60">Links:</span>
+              {/* <span className="text-muted-foreground/60">Links:</span> */}
               <a
                 href={profile.github}
                 target="_blank"
@@ -107,7 +107,7 @@ const Hero: React.FC<HeroProps> = ({ profile }) => {
 
         {/* Right Column: Reduced Compact Profile Image */}
         <div className="shrink-0 flex justify-center ">
-          <div className="relative w-36 h-36 sm:w-44 sm:h-44 rounded-full overflow-hidden bg-secondary border border-border/80 shadow-md">
+          <div className="relative w-26 h-26 sm:w-34 sm:h-34 rounded-full overflow-hidden bg-secondary border border-border/80 shadow-md">
             <Image
               src="/profile-image.jpeg"
               alt="Fabian Muoghalu"
