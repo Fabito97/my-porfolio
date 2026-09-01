@@ -4,9 +4,10 @@ import Link from "next/link";
 import { ArrowLeft, ExternalLink, CheckCircle2, Cpu, Wrench, Lightbulb, Trophy } from "lucide-react";
 import { FaGithub } from "react-icons/fa6";
 
-export default function ProjectDetailPage({ params }: { params: { slug: string } }) {
+export default async function ProjectDetailPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
   const db = getDatabase();
-  const project = db.projects.find((p) => p.slug === params.slug);
+  const project = db.projects.find((p) => p.slug === slug);
 
   if (!project) {
     notFound();

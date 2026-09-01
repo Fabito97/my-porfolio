@@ -3,7 +3,8 @@
 import { cn } from "@/lib/utils";
 import { BackgroundGradientAnimation } from "./GradientBg";
 import { GlobeDemo } from "./GridGlobe";
-import Lottie from "lottie-react";
+import dynamic from "next/dynamic";
+const Lottie = dynamic<any>(() => import("lottie-react").then((mod: any) => mod.default), { ssr: false });
 import animationData from '@/data/confetti.json'
 import { useState } from "react";
 import MagicButton from "./MagicButton";

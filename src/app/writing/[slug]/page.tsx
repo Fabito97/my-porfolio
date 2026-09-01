@@ -3,9 +3,10 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { ArrowLeft, Clock, Calendar } from "lucide-react";
 
-export default function ArticleDetailPage({ params }: { params: { slug: string } }) {
+export default async function ArticleDetailPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
   const db = getDatabase();
-  const article = db.articles.find((a) => a.slug === params.slug);
+  const article = db.articles.find((a) => a.slug === slug);
 
   if (!article) {
     notFound();

@@ -1,11 +1,24 @@
 import type { Config } from "tailwindcss";
 
 const svgToDataUri = require("mini-svg-data-uri");
-
 const colors = require("tailwindcss/colors");
-const {
-  default: flattenColorPalette,
-} = require("tailwindcss/lib/util/flattenColorPalette");
+
+function flattenColorPalette(colors: any): any {
+  const result: any = {};
+  const recurse = (obj: any, currentKey = "") => {
+    for (const [key, value] of Object.entries(obj || {})) {
+      const newKey = currentKey ? `${currentKey}-${key}` : key;
+      if (typeof value === "object" && value !== null && !Array.isArray(value)) {
+        recurse(value, newKey);
+      } else {
+        result[newKey] = value;
+      }
+    }
+  };
+  recurse(colors);
+  return result;
+}
+
 
 const config = {
   darkMode: ["class"],

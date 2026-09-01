@@ -8,7 +8,7 @@ export async function GET() {
 }
 
 export async function POST(req: NextRequest) {
-  if (!verifyAdminSession()) {
+  if (!(await verifyAdminSession())) {
     return NextResponse.json({ error: 'Unauthorized admin access.' }, { status: 401 });
   }
 

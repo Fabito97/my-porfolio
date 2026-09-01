@@ -12,7 +12,7 @@ import Link from "next/link";
 import dynamic from "next/dynamic";
 import { config } from "@/lib/config";
 
-const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
+const Lottie = dynamic<any>(() => import("lottie-react").then((mod: any) => mod.default), { ssr: false });
 
 const Experience = ({ isDark }:{ isDark:boolean}) => {
   const [copied, setCopied] = useState(false);
