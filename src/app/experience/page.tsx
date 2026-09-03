@@ -123,23 +123,33 @@ export default function ExperiencePage() {
         </div>
       </div>
 
-      {/* Contributions / Education */}
+      {/* Contributions & Community */}
       <div className="space-y-6 pt-6 border-t border-border/80">
-        <h2 className="text-xl font-bold text-foreground font-mono flex items-center gap-2">
-          <Award className="w-5 h-5 text-amber-500" /> Education & Certifications
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="space-y-1">
+          <div className="inline-flex items-center gap-1.5 text-xs font-mono font-bold uppercase tracking-wider text-amber-500">
+            <Award className="w-3.5 h-3.5" />
+            <span>Community & Technical Involvement</span>
+          </div>
+          <h2 className="text-xl sm:text-2xl font-bold text-foreground font-mono flex items-center gap-2">
+            Contributions & Community
+          </h2>
+          <p className="text-xs sm:text-sm text-muted-foreground">
+            Technical mentoring, contributor support, and collaborative coordination outside formal employment.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {contributions.map((c) => (
-            <div key={c.id} className="p-4 rounded-xl border border-border/80 bg-card space-y-2 flex flex-col justify-between">
-              <div className="space-y-1.5">
-                <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20 font-semibold">
+            <div key={c.id} className="p-5 sm:p-6 rounded-2xl border border-border/80 bg-card space-y-3 flex flex-col justify-between shadow-sm hover:border-primary/40 transition-colors">
+              <div className="space-y-2">
+                <span className="text-[11px] font-mono px-2.5 py-0.5 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20 font-semibold w-fit inline-block">
                   {c.badge}
                 </span>
-                <h3 className="text-sm font-bold text-foreground pt-1">{c.title}</h3>
-                <p className="text-xs text-muted-foreground leading-relaxed">{c.description}</p>
+                <h3 className="text-base sm:text-lg font-bold text-foreground pt-1">{c.title}</h3>
+                <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">{c.description}</p>
               </div>
-              <div className="pt-2 flex items-center justify-between text-xs font-mono text-muted-foreground border-t border-border/60">
-                <span>{c.date}</span>
+              <div className="pt-3 flex items-center justify-between text-xs font-mono text-muted-foreground border-t border-border/60">
+                <span className="text-emerald-500 font-semibold">{c.date}</span>
                 {c.url && (
                   <a href={c.url} target="_blank" rel="noreferrer" className="text-primary hover:underline flex items-center gap-1 font-semibold">
                     <span>View Link</span> <ExternalLink className="w-3 h-3" />

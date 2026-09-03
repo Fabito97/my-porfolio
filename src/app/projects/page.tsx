@@ -114,35 +114,50 @@ export default function ProjectsPage() {
                     <ArrowRight className="w-3.5 h-3.5" />
                   </Link>
 
-                  <div className="flex items-center justify-between pt-1 text-muted-foreground text-xs font-mono">
-                    {project.githubUrl ? (
-                      <a
-                        href={project.githubUrl}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="hover:text-foreground inline-flex items-center gap-1 font-semibold"
-                      >
-                        <FaGithub className="w-3.5 h-3.5" />
-                        <span>Source Code</span>
-                      </a>
-                    ) : project.isPrivateRepo ? (
-                      <span className="text-[11px] text-muted-foreground/80 italic">
-                        Private client repo
-                      </span>
-                    ) : (
-                      <span></span>
-                    )}
-                    {project.liveUrl && (
-                      <a
-                        href={project.liveUrl}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="hover:text-foreground inline-flex items-center gap-1 font-semibold"
-                      >
-                        <ExternalLink className="w-3.5 h-3.5 text-emerald-500" />
-                        <span>Live Demo</span>
-                      </a>
-                    )}
+                  <div className="flex flex-wrap items-center justify-between gap-2 pt-1 text-muted-foreground text-xs font-mono">
+                    <div className="flex items-center gap-3">
+                      {project.githubUrl && (
+                        <a
+                          href={project.githubUrl}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="hover:text-foreground inline-flex items-center gap-1 font-semibold"
+                        >
+                          <FaGithub className="w-3.5 h-3.5" />
+                          <span>Code</span>
+                        </a>
+                      )}
+                      {project.isPrivateRepo && !project.githubUrl && (
+                        <span className="text-[11px] text-muted-foreground/80 italic">
+                          Private repo
+                        </span>
+                      )}
+                    </div>
+
+                    <div className="flex items-center gap-3">
+                      {project.demoUrl && (
+                        <a
+                          href={project.demoUrl}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="hover:text-amber-500 inline-flex items-center gap-1 font-semibold"
+                        >
+                          <ExternalLink className="w-3.5 h-3.5 text-amber-500" />
+                          <span>Demo</span>
+                        </a>
+                      )}
+                      {project.liveUrl && (
+                        <a
+                          href={project.liveUrl}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="hover:text-emerald-500 inline-flex items-center gap-1 font-semibold"
+                        >
+                          <ExternalLink className="w-3.5 h-3.5 text-emerald-500" />
+                          <span>Live Site</span>
+                        </a>
+                      )}
+                    </div>
                   </div>
                 </div>
               </div>

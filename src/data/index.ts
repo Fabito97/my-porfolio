@@ -72,12 +72,12 @@ export const gridItems = [
 export const projects = [
   {
     id: 1,
-    title: "Flex Your Brands Platform",
+    title: "Masin Advisory Group Platform",
     des: "Full-stack business platform combining content, events, payments, and AI-powered customer support.",
     img: "/blog.png",
     iconLists: ["/nextjs.svg", "/ts.svg", "/tail.svg", "/re.svg"],
-    link: "https://github.com/Fabito97",
-    liveLink: "",
+    link: "https://masinadvisory.com",
+    liveLink: "https://masinadvisory.com",
     demo: "",
     techStack: ["Next.js", "TypeScript", "Cloudflare D1", "Vercel AI SDK", "Grok", "Cloudflare AI"],
     role: "Software Engineer",

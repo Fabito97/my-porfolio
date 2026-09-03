@@ -75,6 +75,17 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
             </div>
           )}
 
+          {project.demoUrl && (
+            <a
+              href={project.demoUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="px-4 py-2 rounded-xl bg-amber-500/10 text-amber-600 dark:text-amber-400 text-xs font-mono font-semibold hover:bg-amber-500/20 border border-amber-500/30 flex items-center gap-2 shadow-sm transition-colors"
+            >
+              <ExternalLink className="w-4 h-4 text-amber-500" /> Watch Live Demo
+            </a>
+          )}
+
           {project.liveUrl && (
             <a
               href={project.liveUrl}

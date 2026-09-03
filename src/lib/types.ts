@@ -82,10 +82,27 @@ export interface ExperienceEntry {
   };
 }
 
+export interface EducationEntry {
+  id: string;
+  institution: string;
+  degree: string;
+  year: string;
+  description: string;
+}
+
+export interface CertificationEntry {
+  id: string;
+  issuer: string;
+  title: string;
+  year: string;
+  description: string;
+  credentialUrl?: string;
+}
+
 export interface Contribution {
   id: string;
   title: string;
-  type: 'Open Source' | 'Article' | 'Guide / Tutorial' | 'Community Project' | 'Experiment';
+  type: 'Open Source' | 'Article' | 'Guide / Tutorial' | 'Community Project' | 'Experiment' | 'Mentoring & Community' | 'Technical Contribution';
   description: string;
   url?: string;
   date: string;

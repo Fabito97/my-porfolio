@@ -1,4 +1,4 @@
-import { Project, Article, LearningItem, SkillGroup, ExperienceEntry, Contribution, SiteProfile } from './types';
+import { Project, Article, LearningItem, SkillGroup, ExperienceEntry, Contribution, SiteProfile, EducationEntry, CertificationEntry } from './types';
 import fs from 'fs';
 import path from 'path';
 
@@ -22,13 +22,14 @@ export const initialProfile: SiteProfile = {
 
 export const initialProjects: Project[] = [
   {
-    id: "flex-your-brands-platform",
-    slug: "flex-your-brands-platform",
-    title: "Flex Your Brands Platform",
+    id: "masin-advisory-group-platform",
+    slug: "masin-advisory-group-platform",
+    title: "Masin Advisory Group Platform",
     tagline: "Full-stack business platform combining content, events, payments, and AI-powered customer support.",
     category: "Full-Stack Application / AI Integration",
     type: "Professional Client Work",
-    organization: "Flex Your Brands",
+    organization: "Masin Advisory Group",
+    liveUrl: "https://masinadvisory.com",
     isPrivateRepo: true,
     privateRepoNote: "Source code is private due to client ownership.",
     featured: true,
@@ -431,38 +432,55 @@ export const initialExperience: ExperienceEntry[] = [
   }
 ];
 
-export const initialContributions: Contribution[] = [
-  {
-    id: "edu-decagon",
-    title: "Software Engineering Programme",
-    type: "Guide / Tutorial",
-    description: "Decagon Institute (2024). Software Engineering Certificate. Intensive full-stack software engineering programme covering C#/.NET Core, system design, relational databases, and team-led delivery.",
-    date: "2024",
-    badge: "Decagon Institute"
-  },
+export const initialEducation: EducationEntry[] = [
   {
     id: "edu-uniben",
-    title: "B.A.(Ed) in English and Literature",
-    type: "Guide / Tutorial",
-    description: "University of Benin (2023). Strong foundation in critical thinking, linguistic precision, structured reasoning, and technical communication.",
-    date: "2023",
-    badge: "University of Benin"
+    institution: "University of Benin",
+    degree: "B.A.(Ed) English & Literature",
+    year: "2023",
+    description: "Strong foundation in critical thinking, structured reasoning, communication, and analytical problem-solving."
   },
   {
+    id: "edu-decagon",
+    institution: "Decagon Institute",
+    degree: "Software Engineering Programme",
+    year: "2024",
+    description: "Intensive software engineering training covering backend and full-stack development, C#/.NET, databases, system design, APIs, and collaborative software development."
+  }
+];
+
+export const initialCertifications: CertificationEntry[] = [
+  {
     id: "cert-hng",
-    title: "Backend Development Certificate",
-    type: "Open Source",
-    description: "HNG 12 Backend Engineering certification for building production-ready C#/.NET APIs and microservices.",
-    date: "2025",
-    badge: "HNG Tech"
+    issuer: "HNG Tech",
+    title: "Backend Engineering Certificate",
+    year: "2025",
+    description: "Completed the HNG 12 Backend Engineering programme, working through staged software engineering challenges involving backend APIs, integrations, AI workflows, team collaboration, deployment, and production-oriented development."
   },
   {
     id: "cert-aws",
+    issuer: "CloudSec Network",
     title: "AWS Cloud Bootcamp Certificate",
-    type: "Experiment",
-    description: "Cloudsec Network certification covering AWS cloud infrastructure, EC2, security, and containerized deployment.",
-    date: "2025",
-    badge: "Cloudsec Network"
+    year: "2025",
+    description: "Training covering AWS cloud infrastructure, EC2, deployment, and containerized application environments."
+  },
+  {
+    id: "cert-decagon",
+    issuer: "Decagon Institute",
+    title: "Software Engineering Certificate",
+    year: "2024",
+    description: "Formal certification awarded upon completing full-stack and backend engineering curriculum across C#/.NET Core, database design, and agile teamwork."
+  }
+];
+
+export const initialContributions: Contribution[] = [
+  {
+    id: "contrib-hng",
+    title: "Technical Mentoring & Project Coordination",
+    type: "Mentoring & Community",
+    description: "Supported contributors in the HNG internship cohorts through technical discussions, engineering guidance, and team coordination, including contributor assistance and product-level coordination on internal initiatives such as VulnWatch.",
+    date: "2025 – Present",
+    badge: "HNG Tech · Community & Leadership"
   }
 ];
 
@@ -477,6 +495,8 @@ export interface AppDatabase {
   skills: SkillGroup[];
   experience: ExperienceEntry[];
   contributions: Contribution[];
+  education: EducationEntry[];
+  certifications: CertificationEntry[];
 }
 
 export function getDatabase(): AppDatabase {
@@ -492,6 +512,8 @@ export function getDatabase(): AppDatabase {
         skills: parsed.skills || initialSkillGroups,
         experience: parsed.experience || initialExperience,
         contributions: parsed.contributions || initialContributions,
+        education: parsed.education || initialEducation,
+        certifications: parsed.certifications || initialCertifications,
       };
     }
   } catch (err) {
@@ -506,6 +528,8 @@ export function getDatabase(): AppDatabase {
     skills: initialSkillGroups,
     experience: initialExperience,
     contributions: initialContributions,
+    education: initialEducation,
+    certifications: initialCertifications,
   };
 }
 

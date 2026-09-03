@@ -174,7 +174,7 @@ export default function Home() {
                   )}
                 </div>
 
-                <div className="flex items-center justify-between pt-1">
+                <div className="flex flex-wrap items-center justify-between gap-2 pt-1">
                   <Link
                     href={`/projects/${project.slug}`}
                     className="text-xs font-mono text-primary font-bold hover:underline inline-flex items-center gap-1.5 group-hover:translate-x-0.5 transition-transform"
@@ -182,18 +182,44 @@ export default function Home() {
                     <span>View Case Study</span> <ArrowRight className="w-3.5 h-3.5" />
                   </Link>
 
-                  {project.githubUrl && (
-                    <a
-                      href={project.githubUrl}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="text-muted-foreground hover:text-foreground text-xs font-mono inline-flex items-center gap-1"
-                      title="GitHub Repository"
-                    >
-                      <FaGithub className="w-3.5 h-3.5" />
-                      <span>Code</span>
-                    </a>
-                  )}
+                  <div className="flex items-center gap-2.5 text-xs font-mono text-muted-foreground">
+                    {project.githubUrl && (
+                      <a
+                        href={project.githubUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="hover:text-foreground inline-flex items-center gap-1"
+                        title="GitHub Repository"
+                      >
+                        <FaGithub className="w-3.5 h-3.5" />
+                        <span>Code</span>
+                      </a>
+                    )}
+                    {project.liveUrl && (
+                      <a
+                        href={project.liveUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="hover:text-emerald-500 inline-flex items-center gap-1 font-medium"
+                        title="Live Site"
+                      >
+                        <ExternalLink className="w-3.5 h-3.5 text-emerald-500" />
+                        <span>Live</span>
+                      </a>
+                    )}
+                    {project.demoUrl && (
+                      <a
+                        href={project.demoUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="hover:text-amber-500 inline-flex items-center gap-1 font-medium"
+                        title="Demo Preview"
+                      >
+                        <ExternalLink className="w-3.5 h-3.5 text-amber-500" />
+                        <span>Demo</span>
+                      </a>
+                    )}
+                  </div>
                 </div>
               </div>
             </div>
