@@ -14,7 +14,7 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="space-y-10 max-w-4xl mx-auto">
+    <div className="space-y-10 max-w-4xl mx-auto px-4 sm:px-6 py-10">
       {/* Header */}
       <div className="space-y-3 border-b border-border/80 pb-8">
         <div className="inline-flex items-center gap-1.5 text-xs font-mono text-primary uppercase tracking-wider">

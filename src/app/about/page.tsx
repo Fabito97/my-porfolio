@@ -107,7 +107,7 @@ export default function AboutPage() {
   ];
 
   return (
-    <div className="space-y-20 sm:space-y-28 max-w-5xl mx-auto py-6">
+    <div className="space-y-20 sm:space-y-28 max-w-5xl mx-auto px-4 sm:px-6 py-10">
       {/* 1. Hero / Personal Narrative */}
       <section className="space-y-8 border-b border-border/80 pb-12">
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">

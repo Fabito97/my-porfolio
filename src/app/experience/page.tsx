@@ -6,7 +6,7 @@ export default function ExperiencePage() {
   const { experience, contributions } = db;
 
   return (
-    <div className="space-y-16 max-w-4xl mx-auto py-2">
+    <div className="space-y-16 max-w-4xl mx-auto px-4 sm:px-6 py-10">
       {/* Header */}
       <div className="space-y-4 border-b border-border/80 pb-8">
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">

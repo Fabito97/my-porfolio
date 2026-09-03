@@ -30,7 +30,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning className={`${jakarta.variable} ${jetbrainsMono.variable}`}>
-      <body className="font-sans min-h-screen flex flex-col bg-background text-foreground antialiased">
+      <body className="font-sans min-h-screen flex flex-col bg-background text-foreground antialiased overflow-x-hidden">
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
@@ -38,9 +38,9 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Navbar />
-          <div className="flex-1 max-w-6xl w-full mx-auto px-4 sm:px-6 py-8">
+          <main className="flex-1 w-full">
             {children}
-          </div>
+          </main>
           <FooterEditorial />
         </ThemeProvider>
       </body>

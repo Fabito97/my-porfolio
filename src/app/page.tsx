@@ -29,12 +29,14 @@ export default function Home() {
   const featuredProjects = projects.filter(p => p.featured).slice(0, 4);
 
   return (
-    <div className="space-y-24 sm:space-y-32 py-6">
-      {/* 1. Hero Section with Picture & Magic Button */}
+    <div className="w-full flex flex-col">
+      {/* 1. Full-Bleed Edge-to-Edge Hero Section */}
       <Hero profile={profile} />
 
-      {/* 2. Core Technical Focus */}
-      <section className="space-y-8">
+      {/* 2. Constrained Main Content Stream */}
+      <div className="max-w-6xl w-full mx-auto px-4 sm:px-6 space-y-24 sm:space-y-32 py-12 sm:py-16">
+        {/* Core Technical Focus */}
+        <section className="space-y-8">
         <div className="border-b border-border/80 pb-4 text-center flex flex-col items-center justify-center">
           <div className="inline-flex items-center justify-center gap-1.5 text-xs font-mono font-bold uppercase tracking-wider text-amber-500">
             <Layers className="w-3.5 h-3.5" />
@@ -228,7 +230,7 @@ export default function Home() {
       </section>
 
       {/* 4. Career Timeline Summary */}
-      <section className="space-y-8 pt-4 border-t border-border/80">
+      <section className="space-y-8 pt-4 border- border-border/80">
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-3 border-b border-border/80 pb-4">
           <div>
             <div className="inline-flex items-center gap-1.5 text-xs font-mono font-bold uppercase tracking-wider text-primary">
@@ -354,8 +356,9 @@ export default function Home() {
               position="right"
             />
           </Link>
-        </div>
-      </section>
+          </div>
+        </section>
+      </div>
     </div>
   );
 }
