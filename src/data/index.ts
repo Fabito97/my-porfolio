@@ -72,116 +72,76 @@ export const gridItems = [
 export const projects = [
   {
     id: 1,
-    title: "Personal Memorial Website",
-    des: "A platform to honor my grandmother, built with React, Node.js, and Express. Features API-driven tribute management and a responsive UI.",
-    img: "/memorial.png",
-    iconLists: ["/re.svg"],
-    link: "https://github.com/Fabito97/memorial-website",
-    liveLink: "https://roseline-memorial.onrender.com/",
-    demo: "[your-demo-link, if applicable]",
-    techStack: ["React", "Node.js", "Express", "JavaScript"],
-    role: "Full-Stack Developer",
-    timeline: "[Month Year, e.g., May 2025]"
+    title: "Flex Your Brands Platform",
+    des: "Full-stack business platform combining content, events, payments, and AI-powered customer support.",
+    img: "/blog.png",
+    iconLists: ["/nextjs.svg", "/ts.svg", "/tail.svg", "/re.svg"],
+    link: "https://github.com/Fabito97",
+    liveLink: "",
+    demo: "",
+    techStack: ["Next.js", "TypeScript", "Cloudflare D1", "Vercel AI SDK", "Grok", "Cloudflare AI"],
+    role: "Software Engineer",
+    timeline: "Jan 2025 - Present"
   },
   {
     id: 2,
-    title: "Telex AI Monitoring Agent",
-    des: "AI agent for monitoring C# applications, tracking errors and metrics with .NET Core and MongoDB.",
+    title: "AI-Assisted Application Monitoring Agent",
+    des: "An AI-assisted application monitoring system that allows developers to investigate application activity through natural-language queries. Built during my work at Telex.",
     img: "/monitor.png",
-    iconLists: ["/c.svg"],
-    link: "https://github.com/telexorg/vigil-apm-agent",
-    demo: "[your-demo-link, if applicable]",
-    techStack: [".NET Core", "MongoDB"],
-    role: "Backend Developer",
-    timeline: "Jan 2025 - Mar 2025"
+    iconLists: ["/csharp.svg", "/mongodb.svg"],
+    link: "https://github.com/Fabito97/apm-agent",
+    liveLink: "",
+    demo: "",
+    techStack: ["C#", "ASP.NET Core", "MongoDB", "Semantic Kernel", "REST APIs"],
+    role: "Backend / AI Engineer",
+    timeline: "Apr 2025 - Dec 2025"
   },
   {
     id: 3,
-    title: "Telex AI Blogger Agent",
-    des: "An AI-powered blogging agent using .NET Core, MongoDB, and Gemini API, with developer guides for agent integration.",
-    img: "/blog.png",
-    iconLists: ["/c.svg"],
-    link: "https://github.com/telexintegrations/telex-blogger-agent",
-    demo: "[your-demo-link, if applicable]",
-    techStack: [".NET Core", "MongoDB", "Gemini API"],
-    role: "Backend Developer",
-    timeline: "Jan 2025 - Apr 2025"
+    title: "RAG Agent System",
+    des: "End-to-end Retrieval-Augmented Generation system allowing users to query information contained within uploaded documents using multi-step agentic retrieval.",
+    img: "/b5.svg",
+    iconLists: ["/ts.svg"],
+    link: "https://github.com/Fabito97/ragent",
+    liveLink: "",
+    demo: "",
+    techStack: ["Python", "FastAPI", "LangChain", "ChromaDB", "LLM APIs", "Vector Embeddings"],
+    role: "Backend / AI Engineer",
+    timeline: "2025"
   },
   {
     id: 4,
-    title: "Traidr E-commerce Platform",
-    des: "Full-stack MVP with Google Sign-In and real-time search, built using React, .NET Core, and PostgreSQL in an Agile team.",
+    title: "Traïdr E-Commerce Platform",
+    des: "Full-stack e-commerce MVP built as a team capstone project with Google Sign-In, catalog indexing, and shopping cart transactions.",
     img: "/traider.png",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/c.svg"],
+    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/csharp.svg"],
     link: "https://github.com/Fabito97/traidr_e-commerce",
-    demo: "[your-demo-link, if applicable]",
-    techStack: ["React", "Tailwind CSS", "TypeScript", ".NET Core", "PostgreSQL"],
-    role: "Full-Stack Developer",
-    timeline: "Jul 2024 - Nov 2024"
-  },
-  {
-    id: 5,
-    title: "Todo List Task Manager",
-    des: "Task manager built with React and .NET Core for productivity, featuring a responsive UI.",
-    img: "/todo.png",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/c.svg"],
-    link: "https:///github.com/Fabito97/todolist/",
-    liveLink: "https://toidotaskapp.netlify.app/",
-    demo: "https://toidotaskapp.netlify.app/",
-    techStack: ["React", "Tailwind CSS", "TypeScript", ".NET Core"],
-    role: "Full-Stack Developer",
-    timeline: "[Month Year]"
-  },
-  {
-    id: 6,
-    title: "Contact Book API",
-    des: "JWT-secured .NET Web API for managing client contacts, built with clean code principles.",
-    img: "/contact.png",
-    iconLists: ["/c.svg"],
-    link: "https://github.com/Fabito97/contactbook_webapi",
-    demo: "[your-demo-link, if applicable]",
-    techStack: [".NET Core"],
-    role: "Backend Developer",
-    timeline: "[Month Year]"
-  },
-  // {
-  //   id: 6,
-  //   title: "Portfolio Management System",
-  //   des: "ASP.NET MVC app with admin editing and role-based access control for portfolio management.",
-  //   img: "/portfolio.png",
-  //   iconLists: ["/c.svg"],
-  //   link: "https://github.com/Fabito97/portfolio_mvc",
-  //   demo: "[your-demo-link, if applicable]",
-  //   techStack: [".NET Core", "ASP.NET MVC"],
-  //   role: "Full-Stack Developer",
-  //   timeline: "[Month Year]"
-  // },
+    liveLink: "",
+    demo: "",
+    techStack: ["C#", "ASP.NET Core", "PostgreSQL", "React", "EF Core", "Tailwind CSS"],
+    role: "Team Lead / Full-Stack Contributor",
+    timeline: "2024"
+  }
 ];
 
 export const testimonials = [
   {
     quote:
-      "Working with Fabian was inspiring. He combines deep backend expertise with front-end finesse. His contributions at Penzra Hub consistently elevated our product quality and team morale.",
+      "Working with Fabian was inspiring. He combines deep backend expertise with full-stack execution. His contributions consistently elevated our product quality and team momentum.",
     name: "Lucky Otono",
     title: "CEO, Penzra Hub"
   },
   {
     quote:
-      "Fabian is a sharp and reliable developer. I was impressed by his attention to detail and ability to deliver complex features under tight deadlines. He is a problem-solver who brings clarity to the chaos.",
+      "Fabian is a sharp and reliable developer. I was impressed by his attention to detail and ability to deliver complex features under tight deadlines. He brings clarity to engineering challenges.",
     name: "Godwin Etebenueme",
-    title: "Team mate"
+    title: "Software Engineer"
   },
   {
     quote:
-      "Few developers learn as quickly and adapt as smoothly as Fabian. He took ownership of backend API flows and even optimized areas beyond the initial scope. A solid contributor and communicator.",
+      "Few developers learn as quickly and adapt as smoothly as Fabian. He took ownership of backend API flows, agent workflows, and optimized areas beyond initial scope.",
     name: "John Ansa",
     title: "Senior Software Engineer"
-  },
-  {
-    quote:
-      "Fabian's energy is contagious. Whether it's refactoring legacy code or shipping MVP features, he jumps right in with thoughtful solutions and clear enthusiasm. He is a builder at heart.",
-    name: "Amalachukwu",
-    title: "Protroleum Engineer"
   }
 ];
 
@@ -221,31 +181,24 @@ export const companies = [
 export const workExperience = [
   {
     id: 1,
-    title: "Software Engineer Trainee - Decagon Institute",
-    desc: "Completed 4-month training in React, .NET Core, PostgreSQL, and Agile methodologies, delivering weekly tasks. Spearheaded the development of a full-stack e-commerce MVP with real-time features during final project phase.",
+    title: "Software Engineer - Flex Your Brands",
+    desc: "Built and maintained a full-stack Next.js application combining content management, blog publishing, event management, payments, and AI customer support with tool calling.",
     className: "md:col-span-2",
     thumbnail: "/exp1.svg"
   },
   {
     id: 2,
-    title: "Backend Engineer Intern - HNG Tech",
-    desc: "Engineered RESTful APIs and optimized the existing codebase, while ensuring quality code and writing tests for reliable deployments. Developed agents/integrations using C#/.NET for Telex AI agent platform",
+    title: "Backend Developer (Contributor) - Telex",
+    desc: "Designed and implemented backend APIs and Semantic Kernel orchestration workflows supporting AI applications. Built the AI-assisted application monitoring agent.",
     className: "md:col-span-2",
     thumbnail: "/exp2.svg"
   },
   {
     id: 3,
-    title: "Volunteer Software Engineer - Penzra Hub",
-    desc: "Contributed to the development of backend API for a travel app using .NET Core and PostgreSQL, adhering to clean code and SOLID principles. Implemented features for driver onboarding and data management.",
+    title: "Backend Engineer - HNG Tech (HNG 12)",
+    desc: "Engineered RESTful APIs, led boilerplate backend refactors, and automated Docker container deployment pipelines to AWS EC2 using GitHub Actions.",
     className: "md:col-span-2",
     thumbnail: "/exp3.svg"
-  },
-  {
-    id: 4,
-    title: "Freelance Backend Developer - Telex.im",
-    desc: "Designed AI agent systems using .NET Core and MongoDB for the Agent platform. Authored developer guides for utilizing and integrating agents and tested workflows for reliability.",
-    className: "md:col-span-2",
-    thumbnail: "/exp4.svg"
   }
 ];
 

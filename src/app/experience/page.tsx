@@ -123,10 +123,10 @@ export default function ExperiencePage() {
         </div>
       </div>
 
-      {/* Contributions */}
+      {/* Contributions / Education */}
       <div className="space-y-6 pt-6 border-t border-border/80">
         <h2 className="text-xl font-bold text-foreground font-mono flex items-center gap-2">
-          <Award className="w-5 h-5 text-amber-500" /> Contributions & Open Source
+          <Award className="w-5 h-5 text-amber-500" /> Education & Certifications
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {contributions.map((c) => (

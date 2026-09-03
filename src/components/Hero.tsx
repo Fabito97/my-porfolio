@@ -21,14 +21,14 @@ interface HeroProps {
 
 const Hero: React.FC<HeroProps> = ({ profile }) => {
   return (
-    <section className="relative pt-4 pb-10 sm:pb-14 border-b border-border/80 min-h-[90vh]">
-      <div className="flex flex-col-reverse md:flex-ro items-center md:items-star justify-center gap-6 sm:gap-8 md:pt-10">
+    <section className="relative pt-4 pb-10 sm:pb-14 border-b border-border/80 py-10">
+      <div className="flex flex-col-reverse md:flex-ro items-center md:items-star justify-center gap-6 sm:gap-8">
         {/* Left Column: Identity & Actions */}
         <div className="flex-1 space-y-6 w-full text-center flex flex-col justify-center items-center">
           {/* Status Badge */}
-          <div className="inline-flex justify-center items-center gap-2 px-3 py-1 rounded-full text-xs font-mono bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
+          <div className="inline-flex justify-center items-center gap-2 px-3 py-1 rounded-full text-[11px] font-mono bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
             <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-            <span>Available for Work · {profile.location} or remote</span>
+            <span>Available for Work</span>
           </div>
 
           {/* Clean, Direct Title & Intro */}
@@ -39,8 +39,11 @@ const Hero: React.FC<HeroProps> = ({ profile }) => {
             <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-foreground">
               Software Engineer
             </h1>
+            <p className="text-xs sm:text-sm font-mono text-emerald-600 dark:text-emerald-400 font-semibold tracking-wide">
+              Backend, Full-Stack & AI Applications
+            </p>
             <p className="text-base text-center text-muted-foreground leading-relaxed max-w-xl pt-1">
-              Building backend systems, web applications, and AI agents with C# .NET, Python, and TypeScript.
+              I build backend systems, full-stack applications, and practical AI-powered software.
             </p>
           </div>
 

@@ -27,37 +27,60 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
 
       {/* Header */}
       <div className="space-y-4 border-b border-border/80 pb-8">
-        <div className="flex items-center gap-3">
-          <span className="tech-badge">{project.category}</span>
-          <span className="text-xs font-mono text-muted-foreground">{project.date}</span>
+        <div className="flex flex-wrap items-center gap-2.5 text-xs font-mono">
+          <span className="px-2.5 py-0.5 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20 font-semibold">
+            {project.category}
+          </span>
+          {project.type && (
+            <span className="px-2.5 py-0.5 rounded-full bg-secondary text-muted-foreground border border-border/60">
+              {project.type}
+            </span>
+          )}
+          <span className="text-muted-foreground">{project.date}</span>
         </div>
 
-        <h1 className="text-3xl sm:text-5xl font-bold tracking-tight text-foreground">
+        <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-foreground">
           {project.title}
         </h1>
 
-        <p className="text-lg text-muted-foreground leading-relaxed">
+        <p className="text-base sm:text-lg text-muted-foreground leading-relaxed max-w-3xl">
           {project.tagline}
         </p>
 
+        {/* Attribution & Context Notice */}
+        {project.attribution && (
+          <div className="p-3.5 rounded-xl bg-amber-500/10 border border-amber-500/20 text-xs font-mono text-amber-600 dark:text-amber-400 flex items-center gap-2">
+            <span className="w-2 h-2 rounded-full bg-amber-500"></span>
+            <span>{project.attribution}</span>
+          </div>
+        )}
+
         {/* Action Links */}
-        <div className="flex flex-wrap items-center gap-4 pt-4">
+        <div className="flex flex-wrap items-center gap-3 pt-2">
           {project.githubUrl && (
             <a
               href={project.githubUrl}
               target="_blank"
               rel="noreferrer"
-              className="px-4 py-2 rounded-lg bg-secondary text-foreground text-xs font-mono font-medium hover:bg-secondary/80 border border-border flex items-center gap-2"
+              className="px-4 py-2 rounded-xl bg-secondary text-foreground text-xs font-mono font-semibold hover:bg-secondary/80 border border-border flex items-center gap-2 shadow-sm transition-colors"
             >
-              <FaGithub className="w-4 h-4" /> GitHub Repository
+              <FaGithub className="w-4 h-4" /> View GitHub Repository
             </a>
           )}
+
+          {project.isPrivateRepo && (
+            <div className="px-4 py-2 rounded-xl bg-secondary/60 text-muted-foreground text-xs font-mono border border-border flex items-center gap-2">
+              <FaGithub className="w-4 h-4 text-muted-foreground" />
+              <span>{project.privateRepoNote || "Source code is private due to client ownership."}</span>
+            </div>
+          )}
+
           {project.liveUrl && (
             <a
               href={project.liveUrl}
               target="_blank"
               rel="noreferrer"
-              className="px-4 py-2 rounded-lg bg-primary text-primary-foreground text-xs font-mono font-medium hover:bg-primary/90 flex items-center gap-2"
+              className="px-4 py-2 rounded-xl bg-primary text-primary-foreground text-xs font-mono font-semibold hover:bg-primary/90 flex items-center gap-2 shadow-sm transition-colors"
             >
               <ExternalLink className="w-4 h-4" /> Live Application
             </a>

@@ -32,38 +32,38 @@ export default function AboutPage() {
       icon: Cpu,
       iconColor: "text-emerald-500",
       iconBg: "bg-emerald-500/10 border-emerald-500/20",
-      description: "Designing high-performance APIs, robust microservices, and structured database architectures. I focus on clean architecture, non-blocking asynchronous execution, and data integrity under load.",
-      technologies: ["C# / ASP.NET Core", "Python (FastAPI)", "PostgreSQL / MSSQL", "Docker & CI/CD", "RESTful Architecture"]
+      description: "Designing high-performance APIs, robust services, and structured database architectures. I focus on clean architecture, asynchronous execution, and data integrity under load.",
+      technologies: ["C# / ASP.NET Core", "Python (FastAPI)", "PostgreSQL", "MongoDB", "REST APIs", "Docker"]
     },
     {
       id: "fullstack",
       title: "Full-Stack Development",
-      badge: "End-to-End Delivery",
+      badge: "Production Delivery",
       icon: Layers,
       iconColor: "text-blue-500",
       iconBg: "bg-blue-500/10 border-blue-500/20",
-      description: "Bridging solid backend APIs with dynamic, reactive web applications. I build complete software solutions where state flow, authentication, data persistence, and interface polish work seamlessly together.",
-      technologies: ["Next.js (App Router)", "TypeScript & Node.js", "React & Tailwind CSS", "Serverless Neon Postgres", "REST & State Management"]
+      description: "Bridging solid backend APIs with reactive client web applications. Building unified full-stack software combining content management, event workflows, payments, and authentication.",
+      technologies: ["Next.js (App Router)", "TypeScript", "React", "Cloudflare D1", "Tailwind CSS", "REST & State Flows"]
     },
     {
       id: "ai",
-      title: "AI & Agentic Systems",
+      title: "AI Application Engineering",
       badge: "Intelligent Systems",
       icon: Bot,
       iconColor: "text-amber-500",
       iconBg: "bg-amber-500/10 border-amber-500/20",
-      description: "Building intelligent workflows and autonomous agents that solve concrete business challenges. Experienced with orchestration frameworks, semantic retrieval pipelines, and vector databases.",
-      technologies: ["Semantic Kernel", "LangChain & Python", "RAG & ChromaDB", "LLM Tool Integration", "Context Management"]
+      description: "Connecting language models to real application data and workflows. Experienced with controlled tool calling, multi-step RAG retrieval pipelines, and orchestration frameworks.",
+      technologies: ["Vercel AI SDK", "Semantic Kernel", "LangChain", "RAG & ChromaDB", "Tool Calling", "Embeddings"]
     },
     {
-      id: "frontend",
-      title: "Frontend Engineering",
-      badge: "Interface & UX",
+      id: "cloud",
+      title: "Cloud & Deployment",
+      badge: "Infrastructure & CI/CD",
       icon: Globe,
       iconColor: "text-purple-500",
       iconBg: "bg-purple-500/10 border-purple-500/20",
-      description: "Crafting accessible, responsive, and performance-minded user interfaces. I prioritize clean typography, intuitive user interactions, component reusability, and strong accessibility standards.",
-      technologies: ["React & Next.js", "Modern TypeScript", "Tailwind CSS", "Responsive Design", "Component Systems"]
+      description: "Containerizing software and automating reliable continuous delivery pipelines. Configuring edge infrastructure, serverless databases, reverse proxies, and cloud compute.",
+      technologies: ["Cloudflare", "Docker", "AWS EC2", "GitHub Actions CI/CD", "Nginx", "Docker Compose"]
     }
   ];
 
@@ -108,16 +108,16 @@ export default function AboutPage() {
 
   const education = [
     {
+      institution: "Decagon Institute",
+      degree: "Software Engineering Programme (Certificate)",
+      year: "2024",
+      description: "Intensive full-stack software development programme covering C#/.NET Core, relational database design, system architecture, OOP/SOLID principles, and team-led delivery."
+    },
+    {
       institution: "University of Benin",
       degree: "B.A.(Ed) in English and Literature",
       year: "2023",
-      description: "Graduated with a strong academic foundation in literary analysis, linguistic structure, rhetoric, and precision communication. This background provides me with unique analytical rigor: breaking down ambiguous problem statements into clear logical structures, writing articulate technical specifications, and crafting exact prompt architectures for AI agents."
-    },
-    {
-      institution: "Decagon Institute",
-      degree: "Software Engineering Certificate",
-      year: "2024",
-      description: "Intensive software engineering training covering C#/.NET Core, relational database design, system architecture, OOP/SOLID principles, and team-led agile delivery."
+      description: "Strong foundation in critical thinking, linguistic precision, structured reasoning, and technical communication. Provides analytical rigor for breaking down ambiguous problem statements into clear logical structures and crafting exact prompt/tool architectures for AI workflows."
     }
   ];
 
@@ -137,10 +137,16 @@ export default function AboutPage() {
           
           <div className="space-y-4 text-base sm:text-lg text-muted-foreground leading-relaxed">
             <p>
-              I am Fabian Muoghalu, a software engineer based in Nigeria. I build backend systems, web applications, and AI agents with C# .NET, Python, and TypeScript.
+              I’m a Software Engineer with experience building backend systems, full-stack web applications, and AI-powered software.
             </p>
             <p className="text-sm sm:text-base text-muted-foreground/90">
-              I hold a degree in English and Literature from the University of Benin and have formal software engineering training. This background gives me strong communication skills, structured problem-solving ability, and attention to detail when designing APIs, database schemas, and AI agent workflows.
+              I work primarily with C#/.NET, TypeScript/Next.js, and Python/FastAPI. My experience includes building APIs, database-backed applications, authentication and business workflows, AI integrations, Retrieval-Augmented Generation systems, and cloud deployments.
+            </p>
+            <p className="text-sm sm:text-base text-muted-foreground/90">
+              I’ve worked in fast-paced remote engineering environments where projects were delivered in stages and teams collaborated across APIs, integrations, AI workflows, deployment, and infrastructure. My work has also included client applications combining content management, event workflows, payments, and AI-powered customer support.
+            </p>
+            <p className="text-sm sm:text-base text-muted-foreground/90">
+              My current focus is on building practical AI systems that connect language models to real software—application data, business workflows, APIs, and controlled tools.
             </p>
           </div>
         </div>

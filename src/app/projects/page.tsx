@@ -64,6 +64,12 @@ export default function ProjectsPage() {
                   {project.tagline}
                 </p>
 
+                {project.attribution && (
+                  <p className="text-xs font-mono text-amber-600 dark:text-amber-400 font-medium">
+                    {project.attribution}
+                  </p>
+                )}
+
                 {/* Problem & Solution Grid */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2 text-xs">
                   <div className="p-4 rounded-xl bg-secondary/50 border border-border/60 space-y-1.5">
@@ -108,8 +114,8 @@ export default function ProjectsPage() {
                     <ArrowRight className="w-3.5 h-3.5" />
                   </Link>
 
-                  <div className="flex items-center justify-between pt-1 text-muted-foreground">
-                    {project.githubUrl && (
+                  <div className="flex items-center justify-between pt-1 text-muted-foreground text-xs font-mono">
+                    {project.githubUrl ? (
                       <a
                         href={project.githubUrl}
                         target="_blank"
@@ -119,6 +125,12 @@ export default function ProjectsPage() {
                         <FaGithub className="w-3.5 h-3.5" />
                         <span>Source Code</span>
                       </a>
+                    ) : project.isPrivateRepo ? (
+                      <span className="text-[11px] text-muted-foreground/80 italic">
+                        Private client repo
+                      </span>
+                    ) : (
+                      <span></span>
                     )}
                     {project.liveUrl && (
                       <a
