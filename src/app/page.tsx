@@ -255,7 +255,7 @@ export default function Home() {
           {experience.map((exp, idx) => (
             <div key={exp.id} className="relative space-y-3">
               {/* Timeline Indicator Dot */}
-              <div className="absolute -left-[31px] sm:-left-[39px] top-1 w-5 h-5 rounded-full bg-background border-2 border-primary flex items-center justify-center">
+              <div className="absolute -left-7.75 sm:-left-9.75 top-1 w-5 h-5 rounded-full bg-background border-2 border-primary flex items-center justify-center">
                 <div className={`w-2 h-2 rounded-full ${idx === 0 ? "bg-emerald-500 animate-pulse" : "bg-amber-500"}`}></div>
               </div>
 
@@ -300,7 +300,7 @@ export default function Home() {
       </section>
 
       {/* 5. Categorized Technical Skills */}
-      <section className="space-y-8 pt-4 border-t border-border/80">
+      <section className="space-y-8 pt-4 border-border/80">
         <div className="border-b border-border/80 pb-4 text-center flex flex-col items-center justify-center">
           <div className="inline-flex items-center justify-center gap-1.5 text-xs font-mono font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">
             <Cpu className="w-3.5 h-3.5 text-emerald-500" />

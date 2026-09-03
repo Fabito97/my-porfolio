@@ -58,7 +58,7 @@ const Experience = ({ isDark }:{ isDark:boolean}) => {
           </Button>
         ))}
       </div>
-      <div className="mt-20 row-span-1 relative overflow-hidden rounded-3xl group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none flex flex-col space-y-4 border border-white/[0.1] h-[250px] max-w-[500px] mx-auto items-center justify-center">
+      <div className="mt-20 row-span-1 relative overflow-hidden rounded-3xl group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none flex flex-col space-y-4 border border-white/10 h-62.5 max-w-125 mx-auto items-center justify-center">
         <BackgroundGradientAnimation/>
         <div
         style={{ textShadow: isDark ? "0 2px 4px rgba(0, 0, 0, 0.3)": "" }}
