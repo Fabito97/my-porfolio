@@ -1,16 +1,47 @@
 "use client";
 
 import { useState } from "react";
-import { Mail, MapPin, Send, CheckCircle2 } from "lucide-react";
+import { Mail, MapPin, Send, CheckCircle2, AlertCircle, Loader2, RefreshCw } from "lucide-react";
 import { FaGithub, FaLinkedin } from "react-icons/fa6";
 
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
   const [formData, setFormData] = useState({ name: "", email: "", subject: "", message: "" });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    setLoading(true);
+    setError(null);
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await res.json();
+
+      if (!res.ok || !data.success) {
+        throw new Error(data.error || "Failed to send message. Please try again or email directly.");
+      }
+
+      setSubmitted(true);
+    } catch (err: any) {
+      setError(err.message || "An unexpected error occurred. Please try again or reach out directly.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleReset = () => {
+    setFormData({ name: "", email: "", subject: "", message: "" });
+    setSubmitted(false);
+    setError(null);
   };
 
   return (
@@ -92,16 +123,19 @@ export default function ContactPage() {
             {submitted ? (
               <div className="py-12 text-center space-y-4">
                 <CheckCircle2 className="w-12 h-12 text-emerald-500 mx-auto" />
-                <h2 className="text-xl font-bold text-foreground">Message Sent Successfully!</h2>
+                <h2 className="text-xl font-bold text-foreground">Message Delivered Successfully!</h2>
                 <p className="text-sm text-muted-foreground max-w-sm mx-auto">
-                  Thank you for reaching out, {formData.name}. I will review your message and reply via email shortly.
+                  Thank you for reaching out, <span className="text-foreground font-semibold">{formData.name}</span>. Your message has been sent to my inbox and I will review and reply via <span className="text-foreground font-semibold">{formData.email}</span> shortly.
                 </p>
-                <button
-                  onClick={() => setSubmitted(false)}
-                  className="text-xs font-mono text-primary hover:underline pt-4"
-                >
-                  Send another message
-                </button>
+                <div className="pt-4">
+                  <button
+                    onClick={handleReset}
+                    className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-secondary text-foreground text-xs font-mono hover:bg-secondary/80 border border-border transition-colors"
+                  >
+                    <RefreshCw className="w-3.5 h-3.5" />
+                    <span>Send another message</span>
+                  </button>
+                </div>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-4">
@@ -109,27 +143,39 @@ export default function ContactPage() {
                   Send a Direct Message
                 </h2>
 
+                {error && (
+                  <div className="p-3.5 rounded-lg bg-destructive/10 border border-destructive/20 text-destructive text-xs flex items-start gap-2.5">
+                    <AlertCircle className="w-4 h-4 shrink-0 mt-0.5" />
+                    <div className="space-y-1">
+                      <p className="font-semibold">Unable to deliver message</p>
+                      <p className="text-muted-foreground">{error}</p>
+                    </div>
+                  </div>
+                )}
+
                 <div className="space-y-1.5">
-                  <label className="text-xs font-mono text-muted-foreground">Your Name</label>
+                  <label className="text-xs font-mono text-muted-foreground">Your Name <span className="text-emerald-500">*</span></label>
                   <input
                     type="text"
                     required
+                    disabled={loading}
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     placeholder="e.g. Alex Rivera"
-                    className="w-full px-3 py-2 rounded-lg bg-background border border-border text-sm focus:outline-none focus:ring-1 focus:ring-primary"
+                    className="w-full px-3 py-2 rounded-lg bg-background border border-border text-sm focus:outline-none focus:ring-1 focus:ring-primary disabled:opacity-50"
                   />
                 </div>
 
                 <div className="space-y-1.5">
-                  <label className="text-xs font-mono text-muted-foreground">Your Email Address</label>
+                  <label className="text-xs font-mono text-muted-foreground">Your Email Address <span className="text-emerald-500">*</span></label>
                   <input
                     type="email"
                     required
+                    disabled={loading}
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     placeholder="e.g. alex@company.com"
-                    className="w-full px-3 py-2 rounded-lg bg-background border border-border text-sm focus:outline-none focus:ring-1 focus:ring-primary"
+                    className="w-full px-3 py-2 rounded-lg bg-background border border-border text-sm focus:outline-none focus:ring-1 focus:ring-primary disabled:opacity-50"
                   />
                 </div>
 
@@ -137,31 +183,43 @@ export default function ContactPage() {
                   <label className="text-xs font-mono text-muted-foreground">Subject</label>
                   <input
                     type="text"
-                    required
+                    disabled={loading}
                     value={formData.subject}
                     onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
                     placeholder="e.g. Software Engineering Opportunity / Collaboration"
-                    className="w-full px-3 py-2 rounded-lg bg-background border border-border text-sm focus:outline-none focus:ring-1 focus:ring-primary"
+                    className="w-full px-3 py-2 rounded-lg bg-background border border-border text-sm focus:outline-none focus:ring-1 focus:ring-primary disabled:opacity-50"
                   />
                 </div>
 
                 <div className="space-y-1.5">
-                  <label className="text-xs font-mono text-muted-foreground">Message</label>
+                  <label className="text-xs font-mono text-muted-foreground">Message <span className="text-emerald-500">*</span></label>
                   <textarea
                     rows={4}
                     required
+                    disabled={loading}
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    placeholder="How can I help you?"
-                    className="w-full px-3 py-2 rounded-lg bg-background border border-border text-sm focus:outline-none focus:ring-1 focus:ring-primary"
+                    placeholder="How can I help you? (at least 5 characters)"
+                    className="w-full px-3 py-2 rounded-lg bg-background border border-border text-sm focus:outline-none focus:ring-1 focus:ring-primary disabled:opacity-50"
                   />
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full py-2.5 rounded-lg bg-primary text-primary-foreground font-medium text-sm hover:bg-primary/90 transition-colors flex items-center justify-center gap-2"
+                  disabled={loading}
+                  className="w-full py-2.5 rounded-lg bg-primary text-primary-foreground font-medium text-sm hover:bg-primary/90 transition-colors flex items-center justify-center gap-2 disabled:opacity-60 cursor-pointer disabled:cursor-not-allowed"
                 >
-                  <Send className="w-4 h-4" /> Send Message
+                  {loading ? (
+                    <>
+                      <Loader2 className="w-4 h-4 animate-spin" />
+                      <span>Delivering Message...</span>
+                    </>
+                  ) : (
+                    <>
+                      <Send className="w-4 h-4" />
+                      <span>Send Message</span>
+                    </>
+                  )}
                 </button>
               </form>
             )}
