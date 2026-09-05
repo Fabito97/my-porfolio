@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Mail, MapPin, Send, CheckCircle2, AlertCircle, Loader2, RefreshCw } from "lucide-react";
+import { Mail, Phone, MapPin, Send, CheckCircle2, AlertCircle, Loader2, RefreshCw } from "lucide-react";
 import { FaGithub, FaLinkedin } from "react-icons/fa6";
 
 export default function ContactPage() {
@@ -56,27 +56,38 @@ export default function ContactPage() {
           Let&apos;s Build Something Reliable Together
         </h1>
         <p className="text-muted-foreground text-base max-w-2xl">
-          Whether you have a software engineering opportunity, want to discuss backend architecture, or collaborate on C# .NET AI agents, my inbox is open.
+          Whether you have a software engineering opportunity, want to discuss backend architecture, or collaborate on C# .NET AI agents, my inbox and channels are open.
         </p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
         {/* Direct Contact Info */}
         <div className="md:col-span-5 space-y-6">
-          <div className="p-6 rounded-xl border border-border bg-card space-y-4">
+          <div className="p-6 rounded-xl border border-border bg-card space-y-4 shadow-sm">
             <h2 className="text-base font-mono font-bold text-foreground uppercase tracking-wider">
               Direct Channels
             </h2>
 
             <div className="space-y-3 text-sm">
               <a
-                href="mailto:fabbenco97@gmail.com"
+                href="mailto:fabianmuoghalu97@gmail.com"
                 className="flex items-start gap-3 p-3 rounded-lg hover:bg-secondary transition-colors group"
               >
                 <Mail className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                 <div>
                   <span className="text-xs font-mono text-muted-foreground block">Email</span>
-                  <span className="font-medium text-foreground group-hover:text-primary">fabbenco97@gmail.com</span>
+                  <span className="font-medium text-foreground group-hover:text-primary">fabianmuoghalu97@gmail.com</span>
+                </div>
+              </a>
+
+              <a
+                href="tel:+2348104636559"
+                className="flex items-start gap-3 p-3 rounded-lg hover:bg-secondary transition-colors group"
+              >
+                <Phone className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" />
+                <div>
+                  <span className="text-xs font-mono text-muted-foreground block">Phone / Call</span>
+                  <span className="font-medium text-foreground group-hover:text-primary font-mono">+234 810 463 6559</span>
                 </div>
               </a>
 
@@ -107,7 +118,7 @@ export default function ContactPage() {
               </a>
 
               <div className="flex items-start gap-3 p-3 rounded-lg bg-secondary/50">
-                <MapPin className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" />
+                <MapPin className="w-5 h-5 text-amber-500 shrink-0 mt-0.5" />
                 <div>
                   <span className="text-xs font-mono text-muted-foreground block">Location</span>
                   <span className="font-medium text-foreground">Lagos, Nigeria (UTC+1 / Remote)</span>
@@ -119,18 +130,18 @@ export default function ContactPage() {
 
         {/* Message Form */}
         <div className="md:col-span-7">
-          <div className="p-6 rounded-xl border border-border bg-card">
+          <div className="p-6 rounded-xl border border-border bg-card shadow-sm">
             {submitted ? (
               <div className="py-12 text-center space-y-4">
                 <CheckCircle2 className="w-12 h-12 text-emerald-500 mx-auto" />
                 <h2 className="text-xl font-bold text-foreground">Message Delivered Successfully!</h2>
                 <p className="text-sm text-muted-foreground max-w-sm mx-auto">
-                  Thank you for reaching out, <span className="text-foreground font-semibold">{formData.name}</span>. Your message has been sent to my inbox and I will review and reply via <span className="text-foreground font-semibold">{formData.email}</span> shortly.
+                  Thank you for reaching out, <span className="text-foreground font-semibold">{formData.name}</span>. Your message has been delivered to my inbox and I will review and reply via <span className="text-foreground font-semibold">{formData.email}</span> shortly.
                 </p>
                 <div className="pt-4">
                   <button
                     onClick={handleReset}
-                    className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-secondary text-foreground text-xs font-mono hover:bg-secondary/80 border border-border transition-colors"
+                    className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-secondary text-foreground text-xs font-mono hover:bg-secondary/80 border border-border transition-colors cursor-pointer"
                   >
                     <RefreshCw className="w-3.5 h-3.5" />
                     <span>Send another message</span>
@@ -183,6 +194,7 @@ export default function ContactPage() {
                   <label className="text-xs font-mono text-muted-foreground">Subject</label>
                   <input
                     type="text"
+                    required
                     disabled={loading}
                     value={formData.subject}
                     onChange={(e) => setFormData({ ...formData, subject: e.target.value })}

@@ -120,6 +120,7 @@ export interface SiteProfile {
   philosophy: string;
   location: string;
   email: string;
+  phone?: string;
   github: string;
   linkedin: string;
   twitter: string;

@@ -13,6 +13,7 @@ export const initialProfile: SiteProfile = {
   philosophy: "Acquire -> Build -> Value -> Teach",
   location: "Nigeria",
   email: "fabianmuoghalu97@gmail.com",
+  phone: "+2348104636559",
   github: "https://github.com/Fabito97",
   linkedin: "https://www.linkedin.com/in/fabian-muoghalu-37aa7a1a9/",
   twitter: "https://x.com/MuoghaluFabian",

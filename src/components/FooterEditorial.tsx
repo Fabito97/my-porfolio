@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Mail, ArrowUpRight } from "lucide-react";
+import { Mail, Phone, ArrowUpRight } from "lucide-react";
 import { FaGithub, FaLinkedin, FaXTwitter } from "react-icons/fa6";
 
 export default function FooterEditorial() {
@@ -16,11 +16,11 @@ export default function FooterEditorial() {
               <span className="font-semibold text-foreground tracking-tight">Fabian Muoghalu</span>
             </div>
             <p className="text-sm text-muted-foreground leading-relaxed max-w-md">
-              Software engineer building resilient backend APIs, C# .NET AI monitoring agents, and clean React platforms. Focused on public learning, clear technical guides, and reliable systems.
+              Software engineer building reliable backend APIs, C# .NET AI monitoring agents, and clean React platforms.
             </p>
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono bg-primary/10 text-primary border border-primary/20">
               <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-              LEARN → BUILD → SHARE → CONTRIBUTE
+              LEARN → BUILD → CONTRIBUTE
             </div>
           </div>
 
@@ -48,7 +48,7 @@ export default function FooterEditorial() {
                   <span className="text-[10px] font-mono text-emerald-500 opacity-0 group-hover:opacity-100 transition-opacity">03</span>
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link href="/writing" className="hover:text-foreground transition-colors flex items-center justify-between group">
                   <span>Writing</span>
                   <span className="text-[10px] font-mono text-emerald-500 opacity-0 group-hover:opacity-100 transition-opacity">04</span>
@@ -59,7 +59,7 @@ export default function FooterEditorial() {
                   <span>Learning</span>
                   <span className="text-[10px] font-mono text-emerald-500 opacity-0 group-hover:opacity-100 transition-opacity">05</span>
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <Link href="/contact" className="hover:text-foreground transition-colors flex items-center justify-between group">
                   <span>Contact</span>
@@ -76,6 +76,20 @@ export default function FooterEditorial() {
             </h4>
             <div className="flex flex-col space-y-2 text-sm text-muted-foreground">
               <a
+                href="mailto:fabianmuoghalu97@gmail.com"
+                className="hover:text-foreground transition-colors flex items-center gap-2"
+              >
+                <Mail className="w-4 h-4 text-emerald-500" />
+                <span>fabianmuoghalu97@gmail.com</span>
+              </a>
+              <a
+                href="tel:+2348104636559"
+                className="hover:text-foreground transition-colors flex items-center gap-2"
+              >
+                <Phone className="w-4 h-4 text-primary" />
+                <span className="font-mono">+234 810 463 6559</span>
+              </a>
+              <a
                 href="https://github.com/Fabito97"
                 target="_blank"
                 rel="noreferrer"
@@ -86,7 +100,7 @@ export default function FooterEditorial() {
                 <ArrowUpRight className="w-3 h-3 text-muted-foreground" />
               </a>
               <a
-                href="https://linkedin.com/in/fabian-muoghalu"
+                href="https://linkedin.com/in/fabian-muoghalu-37aa7a1a9/"
                 target="_blank"
                 rel="noreferrer"
                 className="hover:text-foreground transition-colors flex items-center gap-2"
@@ -96,7 +110,7 @@ export default function FooterEditorial() {
                 <ArrowUpRight className="w-3 h-3 text-muted-foreground" />
               </a>
               <a
-                href="https://x.com/Fabito97"
+                href="https://x.com/MuoghaluFabian"
                 target="_blank"
                 rel="noreferrer"
                 className="hover:text-foreground transition-colors flex items-center gap-2"
@@ -104,13 +118,6 @@ export default function FooterEditorial() {
                 <FaXTwitter className="w-4 h-4 text-sky-400" />
                 <span>X / Twitter</span>
                 <ArrowUpRight className="w-3 h-3 text-muted-foreground" />
-              </a>
-              <a
-                href="mailto:fabbenco97@gmail.com"
-                className="hover:text-foreground transition-colors flex items-center gap-2"
-              >
-                <Mail className="w-4 h-4 text-emerald-500" />
-                <span>fabbenco97@gmail.com</span>
               </a>
             </div>
           </div>
@@ -120,11 +127,11 @@ export default function FooterEditorial() {
         <div className="pt-8 border-t border-border/60 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-muted-foreground">
           <p>© {new Date().getFullYear()} Fabian Muoghalu. Designed & Built with Next.js & Tailwind CSS.</p>
           <div className="flex items-center gap-4">
-            <Link href="/admin/login" className="hover:text-foreground transition-colors">
+            {/* <Link href="/admin/login" className="hover:text-foreground transition-colors">
               Admin Portal
             </Link>
-            <span>·</span>
-            <span className="text-foreground font-semibold">Lagos, Nigeria</span>
+            <span>·</span> */}
+            <span className="text-foreground/80 font-semibold">Port Harcourt, Nigeria</span>
           </div>
         </div>
       </div>

@@ -19,7 +19,7 @@ const Footer = () => {
           Ready to take <span className='text-black dark:text-purple'> your</span> digital presence to the next level
         </h1>
         <p className='dark:text-white-200 md:mt-10 my-5 text-center'>Reach out to me today and let&apos;s see how I can help you today</p>
-        <a href="mailto:fabbenco97@gmail.com">
+        <a href="mailto:fabianmuoghalu97@gmail.com">
           <MagicButton 
             title="Let's get in touch"
             icon={<FaLocationArrow />}
