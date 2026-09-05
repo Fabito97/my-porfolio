@@ -308,9 +308,9 @@ export const initialSkillGroups: SkillGroup[] = [
     id: "ai_engineering",
     category: "AI Application Engineering",
     skills: [
-      { name: "LLM Integration", level: "Core Proficiency", experienceYears: "2+ yrs" },
-      { name: "AI Agents", level: "Core Proficiency", experienceYears: "2+ yrs" },
-      { name: "Tool Calling", level: "Core Proficiency", experienceYears: "2+ yrs" },
+      { name: "LLM Integration", level: "Core Proficiency", experienceYears: "1+ yrs" },
+      { name: "AI Agents", level: "Core Proficiency", experienceYears: "1+ yrs" },
+      { name: "Tool Calling", level: "Core Proficiency", experienceYears: "1+ yrs" },
       { name: "Retrieval-Augmented Generation (RAG)", level: "Core Proficiency", experienceYears: "1+ yrs" },
       { name: "Semantic Kernel", level: "Core Proficiency", experienceYears: "1+ yrs" },
       { name: "LangChain", level: "Core Proficiency", experienceYears: "1+ yrs" },
@@ -323,13 +323,13 @@ export const initialSkillGroups: SkillGroup[] = [
     id: "frontend",
     category: "Frontend",
     skills: [
-      { name: "TypeScript", level: "Core Proficiency", experienceYears: "2+ yrs" },
-      { name: "JavaScript", level: "Core Proficiency", experienceYears: "3+ yrs" },
-      { name: "React", level: "Core Proficiency", experienceYears: "3+ yrs" },
-      { name: "Next.js", level: "Core Proficiency", experienceYears: "2+ yrs" },
-      { name: "Tailwind CSS", level: "Core Proficiency", experienceYears: "3+ yrs" },
-      { name: "HTML", level: "Core Proficiency", experienceYears: "3+ yrs" },
-      { name: "CSS", level: "Core Proficiency", experienceYears: "3+ yrs" }
+      { name: "TypeScript", level: "Core Proficiency", experienceYears: "1+ yrs" },
+      { name: "JavaScript", level: "Core Proficiency", experienceYears: "2+ yrs" },
+      { name: "React", level: "Core Proficiency", experienceYears: "2+ yrs" },
+      { name: "Next.js", level: "Core Proficiency", experienceYears: "1+ yrs" },
+      { name: "Tailwind CSS", level: "Core Proficiency", experienceYears: "2+ yrs" },
+      { name: "HTML", level: "Core Proficiency", experienceYears: "2+ yrs" },
+      { name: "CSS", level: "Core Proficiency", experienceYears: "2+ yrs" }
     ]
   },
   {
@@ -337,8 +337,8 @@ export const initialSkillGroups: SkillGroup[] = [
     category: "Databases",
     skills: [
       { name: "PostgreSQL", level: "Core Proficiency", experienceYears: "2+ yrs" },
-      { name: "Cloudflare D1", level: "Core Proficiency", experienceYears: "1+ yrs" },
-      { name: "MongoDB", level: "Core Proficiency", experienceYears: "2+ yrs" },
+      { name: "SQLite", level: "Core Proficiency", experienceYears: "1+ yrs" },
+      { name: "MongoDB", level: "Core Proficiency", experienceYears: "1+ yrs" },
       { name: "SQL Server", level: "Core Proficiency", experienceYears: "2+ yrs" },
       { name: "Redis", level: "Working Knowledge", experienceYears: "1+ yrs" },
       { name: "ChromaDB", level: "Core Proficiency", experienceYears: "1+ yrs" }
@@ -350,11 +350,11 @@ export const initialSkillGroups: SkillGroup[] = [
     skills: [
       { name: "Cloudflare", level: "Core Proficiency", experienceYears: "1+ yrs" },
       { name: "Docker", level: "Core Proficiency", experienceYears: "2+ yrs" },
-      { name: "Docker Compose", level: "Core Proficiency", experienceYears: "2+ yrs" },
+      { name: "Docker Compose", level: "Core Proficiency", experienceYears: "1+ yrs" },
       { name: "AWS EC2", level: "Working Knowledge", experienceYears: "1+ yrs" },
-      { name: "GitHub Actions", level: "Core Proficiency", experienceYears: "2+ yrs" },
+      { name: "GitHub Actions", level: "Core Proficiency", experienceYears: "1+ yrs" },
       { name: "Nginx", level: "Working Knowledge", experienceYears: "1+ yrs" },
-      { name: "CI/CD", level: "Core Proficiency", experienceYears: "2+ yrs" }
+      { name: "CI/CD", level: "Core Proficiency", experienceYears: "1+ yrs" }
     ]
   }
 ];

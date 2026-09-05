@@ -50,6 +50,7 @@ const Hero: React.FC<HeroProps> = ({ profile }) => {
             alt="Code Architecture Visual"
             width={586}
             height={383}
+            priority
             className="w-full h-auto object-contain"
           />
         </div>

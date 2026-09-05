@@ -14,7 +14,7 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
   }
 
   return (
-    <div className="space-y-12 max-w-4xl mx-auto px-4 sm:px-6 py-10">
+    <div className="space-y-12 max-w-6xl w-full mx-auto px-4 sm:px-6 py-10">
       {/* Back Link */}
       <div>
         <Link

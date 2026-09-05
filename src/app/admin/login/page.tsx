@@ -37,7 +37,7 @@ export default function AdminLoginPage() {
   };
 
   return (
-    <div className="min-h-[60vh] flex items-center justify-center py-12">
+    <div className="min-h-[60vh] max-w-6xl w-full mx-auto px-4 sm:px-6 flex items-center justify-center py-12">
       <div className="w-full max-w-md p-8 rounded-2xl border border-border bg-card space-y-6 shadow-lg">
         <div className="text-center space-y-2">
           <div className="w-12 h-12 rounded-xl bg-primary/10 text-primary border border-primary/20 flex items-center justify-center mx-auto">

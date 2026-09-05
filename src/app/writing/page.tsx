@@ -7,7 +7,7 @@ export default function WritingPage() {
   const articles = db.articles.filter((a) => a.published);
 
   return (
-    <div className="space-y-12 max-w-4xl mx-auto px-4 sm:px-6 py-10">
+    <div className="space-y-12 max-w-6xl w-full mx-auto px-4 sm:px-6 py-10">
       {/* Header */}
       <div className="space-y-4 border-b border-border/80 pb-8">
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { getDatabase } from "@/lib/store";
 import { 
   ArrowRight, 
@@ -16,7 +17,8 @@ import {
   Lightbulb,
   Target,
   GraduationCap,
-  Award
+  Award,
+  Zap
 } from "lucide-react";
 import { FaGithub, FaLinkedin, FaXTwitter } from "react-icons/fa6";
 
@@ -107,32 +109,83 @@ export default function AboutPage() {
   ];
 
   return (
-    <div className="space-y-20 sm:space-y-28 max-w-5xl mx-auto px-4 sm:px-6 py-10">
-      {/* 1. Hero / Personal Narrative */}
-      <section className="space-y-8 border-b border-border/80 pb-12">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
-          <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-          <span>Software Engineer · Nigeria</span>
-        </div>
+    <div className="space-y-20 sm:space-y-28 max-w-6xl w-full mx-auto px-4 sm:px-6 py-10">
+      {/* 1. Hero / Personal Narrative with 2-Column Layout */}
+      <section className="space-y-10 border-b border-border/80 pb-12">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+          {/* Left Column: Narrative Content */}
+          <div className="lg:col-span-7 space-y-6">
+            {/* <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
+              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+              <span>Software Engineer · Nigeria</span>
+            </div> */}
 
-        <div className="space-y-5 max-w-4xl">
-          <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-foreground leading-[1.18]">
-            Software Engineer
-          </h1>
-          
-          <div className="space-y-4 text-base sm:text-lg text-muted-foreground leading-relaxed">
-            <p>
-              I’m a Software Engineer with experience building backend systems, full-stack web applications, and AI-powered software.
-            </p>
-            <p className="text-sm sm:text-base text-muted-foreground/90">
-              I work primarily with C#/.NET, TypeScript/Next.js, and Python/FastAPI. My experience includes building APIs, database-backed applications, authentication and business workflows, AI integrations, Retrieval-Augmented Generation systems, and cloud deployments.
-            </p>
-            <p className="text-sm sm:text-base text-muted-foreground/90">
-              I’ve worked in fast-paced remote engineering environments where projects were delivered in stages and teams collaborated across APIs, integrations, AI workflows, deployment, and infrastructure. My work has also included client applications combining content management, event workflows, payments, and AI-powered customer support.
-            </p>
-            <p className="text-sm sm:text-base text-muted-foreground/90">
-              My current focus is on building practical AI systems that connect language models to real software—application data, business workflows, APIs, and controlled tools.
-            </p>
+            <div className="space-y-4">
+              <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-foreground leading-[1.18]">
+                Software Engineer
+              </h1>
+              <p className="text-sm font-mono text-emerald-600 dark:text-emerald-400 font-semibold tracking-wide">
+                Backend, Full-Stack & AI Applications
+              </p>
+            </div>
+            
+            <div className="space-y-4 text-sm sm:text-sm text-muted-foreground leading-relaxed">
+              <p>
+                I’m a Software Engineer with experience building backend systems, full-stack web applications, and AI-powered software.
+              </p>
+              <p className="text-sm sm:text-sm text-muted-foreground/90">
+                I work primarily with C#/.NET, TypeScript/Next.js, and Python/FastAPI. My experience includes building APIs, database-backed applications, authentication and business workflows, AI integrations, Retrieval-Augmented Generation systems, and cloud deployments.
+              </p>
+              <p className="text-sm sm:text-sm text-muted-foreground/90">
+                I’ve worked in fast-paced remote engineering environments where projects were delivered in stages and teams collaborated across APIs, integrations, AI workflows, deployment, and infrastructure. My work has also included client applications combining content management, event workflows, payments, and AI-powered customer support.
+              </p>
+              <p className="text-sm sm:text-sm text-muted-foreground/90">
+                My current focus is on building practical systems and AI applications that connect language models to real software—application data, business workflows, APIs, and controlled tools.
+              </p>
+            </div>
+          </div>
+
+          {/* Right Column: Styled Container with exp1.svg */}
+          <div className="lg:col-span-5 flex justify-center w-full">
+            <div className="relative w-full max-w-md rounded-3xl bg-card/60 backdrop-blur-md border border-border/80 dark:border-primary/20 p-6 sm:p-8 shadow-2xl overflow-hidden flex flex-col items-center justify-between group hover:border-primary/50 transition-all duration-300">
+              {/* Ambient Glowing Background Orbs */}
+              <div className="absolute -top-12 -right-12 w-44 h-44 bg-primary/20 rounded-full blur-3xl pointer-events-none"></div>
+              <div className="absolute -bottom-12 -left-12 w-44 h-44 bg-emerald-500/15 rounded-full blur-3xl pointer-events-none"></div>
+
+              {/* Top Meta Tag */}
+              <div className="w-full flex items-center justify-between text-xs font-mono text-muted-foreground border-b border-border/60 pb-4 relative z-10">
+                <div className="flex items-center gap-2">
+                  <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                  <span className="text-foreground font-semibold">Engineering Profile</span>
+                </div>
+                <span className="text-[11px] px-2 py-0.5 rounded bg-primary/10 text-primary border border-primary/20">
+                  Full-Stack
+                </span>
+              </div>
+
+              {/* Center exp1.svg Visual */}
+              <div className="relative z-10 my-8 w-44 h-44 sm:w-44 sm:h-44 flex items-center justify-center transform group-hover:scale-105 transition-transform duration-300">
+                <div className="absolute inset-0 rounded-full bg-linear-to-tr from-emerald-500/20 via-primary/20 to-purple-500/20 blur-xl opacity-60"></div>
+                <Image
+                  src="/exp1.svg"
+                  alt="Software Engineer Experience"
+                  width={220}
+                  height={200}
+                  className="w-full h-full object-contain drop-shadow-2xl relative z-10"
+                  priority
+                />
+              </div>
+
+              {/* Bottom Caption / Highlight */}
+              <div className="w-full pt-4 border-t border-border/60 text-center space-y-1 relative z-10">
+                {/* <p className="text-sm font-bold text-foreground font-mono">
+                  Fabian Muoghalu
+                </p> */}
+                <p className="text-xs font-mono text-muted-foreground">
+                  Backend Systems · Web Platforms · AI Agents
+                </p>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -201,7 +254,7 @@ export default function AboutPage() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {roles.map((role) => {
             const Icon = role.icon;
             return (
@@ -219,16 +272,16 @@ export default function AboutPage() {
                     </span>
                   </div>
 
-                  <h3 className="text-xl font-bold text-foreground">
+                  <h3 className="text-lg font-bold text-foreground">
                     {role.title}
                   </h3>
 
-                  <p className="text-sm text-muted-foreground leading-relaxed">
+                  <p className="text-xs text-muted-foreground leading-relaxed">
                     {role.description}
                   </p>
                 </div>
 
-                <div className="pt-4 border-t border-border/60">
+                {/* <div className="pt-4 border-t border-border/60">
                   <span className="text-[11px] font-mono font-semibold uppercase text-muted-foreground/90 block mb-2">
                     Key Technologies & Practices:
                   </span>
@@ -242,10 +295,65 @@ export default function AboutPage() {
                       </span>
                     ))}
                   </div>
-                </div>
+                </div> */}
               </div>
             );
           })}
+        </div>
+      </section>
+
+        {/* 4. Categorized Skills Taxonomy */}
+      <section className="space-y-8">
+        <div className="border-b border-border/80 pb-4">
+          <div className="inline-flex items-center gap-1.5 text-xs font-mono font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">
+            <Cpu className="w-3.5 h-3.5 text-emerald-500" />
+            <span>Categorized Engineering Competencies</span>
+          </div>
+          <h2 className="text-2xl sm:text-4xl font-extrabold tracking-tight text-foreground mt-1">
+            Technical Skills & Tools
+          </h2>
+          <p className="text-sm sm:text-base text-muted-foreground mt-1 max-w-2xl">
+            A comprehensive overview of programming languages, frameworks, databases, and engineering tools I utilize in production.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {skills.map((group) => (
+            <div 
+              key={group.id} 
+              className="p-6 rounded-2xl bg-card border border-border/90 hover:border-primary/40 transition-colors space-y-4 shadow-sm flex flex-col justify-between"
+            >
+              <div className="space-y-3">
+                <div className="flex items-center justify-between border-b border-border/60 pb-3">
+                  <h3 className="font-bold text-base text-foreground font-mono flex items-center gap-2">
+                    {group.id === "languages" && <Code2 className="w-4 h-4 text-emerald-500" />}
+                    {group.id === "backend" && <Cpu className="w-4 h-4 text-amber-500" />}
+                    {group.id === "frontend" && <Globe className="w-4 h-4 text-blue-500" />}
+                    {group.id === "database" && <Database className="w-4 h-4 text-purple-500" />}
+                    {group.id === "ai_cloud" && <Bot className="w-4 h-4 text-emerald-500" />}
+                    {group.category}
+                  </h3>
+                </div>
+
+                <div className="space-y-2.5">
+                  {group.skills.map((sk) => (
+                    <div key={sk.name} className="flex items-center justify-between text-xs font-mono">
+                      <span className="text-foreground font-medium flex items-center gap-1.5">
+                        <span className="w-1.5 h-1.5 rounded-full bg-primary/70"></span>
+                        {sk.name}
+                      </span>
+                      {sk.experienceYears && (
+                        <span className="text-[10px] text-muted-foreground px-2 py-0.5 rounded bg-secondary border border-border/50">
+                          {sk.experienceYears}
+                        </span>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+            </div>
+          ))}
         </div>
       </section>
 
@@ -351,65 +459,6 @@ export default function AboutPage() {
               <div className="pt-3 border-t border-border/60 text-[11px] font-mono text-muted-foreground flex items-center gap-1.5">
                 <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500" />
                 <span className="text-foreground font-semibold">Verified Credential</span>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* 4. Categorized Skills Taxonomy */}
-      <section className="space-y-8">
-        <div className="border-b border-border/80 pb-4">
-          <div className="inline-flex items-center gap-1.5 text-xs font-mono font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">
-            <Cpu className="w-3.5 h-3.5 text-emerald-500" />
-            <span>Categorized Engineering Competencies</span>
-          </div>
-          <h2 className="text-2xl sm:text-4xl font-extrabold tracking-tight text-foreground mt-1">
-            Technical Skills & Tools
-          </h2>
-          <p className="text-sm sm:text-base text-muted-foreground mt-1 max-w-2xl">
-            A comprehensive overview of programming languages, frameworks, databases, and engineering tools I utilize in production.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {skills.map((group) => (
-            <div 
-              key={group.id} 
-              className="p-6 rounded-2xl bg-card border border-border/90 hover:border-primary/40 transition-colors space-y-4 shadow-sm flex flex-col justify-between"
-            >
-              <div className="space-y-3">
-                <div className="flex items-center justify-between border-b border-border/60 pb-3">
-                  <h3 className="font-bold text-base text-foreground font-mono flex items-center gap-2">
-                    {group.id === "languages" && <Code2 className="w-4 h-4 text-emerald-500" />}
-                    {group.id === "backend" && <Cpu className="w-4 h-4 text-amber-500" />}
-                    {group.id === "frontend" && <Globe className="w-4 h-4 text-blue-500" />}
-                    {group.id === "database" && <Database className="w-4 h-4 text-purple-500" />}
-                    {group.id === "ai_cloud" && <Bot className="w-4 h-4 text-emerald-500" />}
-                    {group.category}
-                  </h3>
-                </div>
-
-                <div className="space-y-2.5">
-                  {group.skills.map((sk) => (
-                    <div key={sk.name} className="flex items-center justify-between text-xs font-mono">
-                      <span className="text-foreground font-medium flex items-center gap-1.5">
-                        <span className="w-1.5 h-1.5 rounded-full bg-primary/70"></span>
-                        {sk.name}
-                      </span>
-                      {sk.experienceYears && (
-                        <span className="text-[10px] text-muted-foreground px-2 py-0.5 rounded bg-secondary border border-border/50">
-                          {sk.experienceYears}
-                        </span>
-                      )}
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <div className="pt-3 border-t border-border/60 text-[11px] font-mono text-muted-foreground flex items-center gap-1.5">
-                <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500" />
-                <span className="text-foreground font-semibold">Tested in Production</span>
               </div>
             </div>
           ))}

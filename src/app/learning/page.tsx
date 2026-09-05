@@ -7,7 +7,7 @@ export default function LearningPage() {
   const { learning } = db;
 
   return (
-    <div className="space-y-12 max-w-4xl mx-auto px-4 sm:px-6 py-10">
+    <div className="space-y-12 max-w-6xl w-full mx-auto px-4 sm:px-6 py-10">
       {/* Header */}
       <div className="space-y-4 border-b border-border/80 pb-8">
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono bg-amber-500/10 text-amber-600 dark:text-amber-400 border border-amber-500/20">

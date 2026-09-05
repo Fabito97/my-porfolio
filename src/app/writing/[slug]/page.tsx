@@ -13,7 +13,7 @@ export default async function ArticleDetailPage({ params }: { params: Promise<{ 
   }
 
   return (
-    <div className="space-y-8 max-w-3xl mx-auto">
+    <div className="space-y-8 max-w-6xl w-full mx-auto px-4 sm:px-6 py-10">
       {/* Back Link */}
       <div>
         <Link
