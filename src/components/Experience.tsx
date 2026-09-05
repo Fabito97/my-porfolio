@@ -18,7 +18,6 @@ const Experience = ({ isDark }:{ isDark:boolean}) => {
   const [copied, setCopied] = useState(false);
 
   const handleCopy = () => {
-    navigator.clipboard.writeText("fabbenco97@gmail.com");
     navigator.clipboard.writeText("fabianmuoghalu97@gmail.com");
     setCopied(true);
   };
